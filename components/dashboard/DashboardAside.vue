@@ -17,11 +17,11 @@
         </template>
         Seus times
       </DashboardAsideItem>
-      <DashboardAsideItem to="/dashboard/control">
+      <DashboardAsideItem to="/dashboard/teams/1">
         <template #icon>
           <IconGear class="w-6 h-6" />
         </template>
-        Gerenciar times
+        Gerenciar time
       </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard">
         <template #icon>
