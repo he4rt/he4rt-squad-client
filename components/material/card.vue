@@ -3,7 +3,7 @@
     color === 'he4rt' ? 'border-l-solid border-h-purple' : '']"
         class="w-80 h-40 bg-h-dark-two rounded p-4 box-border z-99999999999999 overflow-y-auto	text-justify">
         <div class="flex items-center justify-between	">
-            <H1 class="text-h-light">{{ tittle }}</H1>
+            <H1 class="text-h-light">{{ title }}</H1>
             <div>
                 <IconCheck class=" w-5 h-5 text-h-purple" />
             </div>
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 defineProps<{
-    tittle: string,
+    title: string,
     description: string,
     color?: 'success' | 'he4rt',
 }>() 
