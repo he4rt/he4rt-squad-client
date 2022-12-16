@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: 'Inter', Courier, monospace;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 9999px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #782BF1;
+  border-radius: 9999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #782BF1;
+}
+
+.font-spline {
+  font-family: 'Spline Sans', Courier, monospace;
+}
+
+.landing-gradient {
+  background: linear-gradient(75.47deg, rgba(13, 13, 13, 0.15) 0%, rgba(120, 43, 241, 0.105) 100%);
+}
+
+.landing-backdrop-gradient {
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.5) -3.48%, #0D0D0D 100%);
+}
