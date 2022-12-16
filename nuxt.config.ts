@@ -4,7 +4,13 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
-    // '@nuxtjs/supabase'
+    '@formkit/nuxt',
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
+      },
+    ],
   ],
   unocss: {
     uno: true,
