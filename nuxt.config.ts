@@ -1,21 +1,13 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    // The private keys which are only available server-side
-    apiSecret: '123',
-    // Keys within public are also exposed client-side
-    public: {
-      apiBase: '/api'
-    }
-  },
+  css: ['@/assets/main.css'],
   modules: [
     '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt'
     // '@nuxtjs/supabase'
   ],
   unocss: {
     uno: true,
-    icons: true,
-    rules: [],
     theme: {
       colors: {
         'hPurple': '#8D3FFF',
@@ -29,5 +21,29 @@ export default defineNuxtConfig({
       },
     }
   },
-  css: ['@/assets/main.css'],
+  motion: {
+    directives: {
+      'default': {
+        initial: {
+          opacity: 0,
+        },
+        enter: {
+          opacity: 1,
+        },
+      },
+      'dashboard': {
+        initial: {
+          x: 50,
+          opacity: 0,
+        },
+        enter: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 500
+          },
+        }
+      }
+    },
+  },
 })

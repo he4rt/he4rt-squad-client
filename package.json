@@ -1,4 +1,5 @@
 {
+  "name": "he4rt-squad-frontend",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -10,6 +11,8 @@
   "devDependencies": {
     "@nuxtjs/supabase": "^0.3.0",
     "@unocss/nuxt": "^0.47.6",
+    "@vueuse/motion": "2.0.0-beta.25",
+    "@vueuse/nuxt": "^9.6.0",
     "nuxt": "3.0.0"
   }
 }

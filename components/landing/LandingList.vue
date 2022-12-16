@@ -26,7 +26,7 @@
       <p class="font-bold text-h-light">Mentor</p>
       <p class="text-h-gray">{{ item.leader }}</p>
     </div>
-    <NuxtLink to="/teams" class="font-bold no-underline text-center text-h-purple cursor-pointer">Ver equipe</NuxtLink>
+    <NuxtLink to="/dashboard/teams" class="font-bold no-underline text-center text-h-purple cursor-pointer">Ver equipe</NuxtLink>
   </div>
 </template>
 

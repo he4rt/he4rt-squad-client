@@ -38,6 +38,10 @@ html {
   font-family: 'Spline Sans', Courier, monospace;
 }
 
+.font-dm-sans {
+  font-family: 'DM Sans', Courier, monospace;
+}
+
 .landing-gradient {
   background: linear-gradient(75.47deg, rgba(13, 13, 13, 0.15) 0%, rgba(120, 43, 241, 0.105) 100%);
 }

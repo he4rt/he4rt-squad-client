@@ -1,0 +1,40 @@
+<template>
+  <div class="w-62.5 min-h-screen overflow-y-auto bg-h-dark-one overflow-x-hidden shadow">
+    <div class="flex items-center justify-center h-20 bg-h-purple w-full">
+      <img src="~/assets/he4rt-1.svg" />
+    </div>
+    <div class="flex flex-col w-full text-h-gray font-bold">
+      <div class="ml-10 py-8 text-h-light">Menu</div>
+      <DashboardAsideItem to="/dashboard/conquests">
+        <template #icon>
+          <IconStar class="w-6 h-6" />
+        </template>
+        Conquistas
+      </DashboardAsideItem>
+      <DashboardAsideItem to="/dashboard/teams">
+        <template #icon>
+          <IconGroup class="w-6 h-6" />
+        </template>
+        Seus times
+      </DashboardAsideItem>
+      <DashboardAsideItem to="/dashboard/control">
+        <template #icon>
+          <IconGear class="w-6 h-6" />
+        </template>
+        Gerenciar times
+      </DashboardAsideItem>
+      <DashboardAsideItem to="/dashboard">
+        <template #icon>
+          <IconUser class="w-6 h-6" />
+        </template>
+        Perfil
+      </DashboardAsideItem>
+      <DashboardAsideItem to="/quit">
+        <template #icon>
+          <IconLogout class="w-6 h-6" />
+        </template>
+        Sair
+      </DashboardAsideItem>
+    </div>
+  </div>
+</template>
