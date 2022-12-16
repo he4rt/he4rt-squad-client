@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-  const list = useState('list', () => [
+  const list = useState('c-list', () => [
     {
       title: '[UI/UX] Criar Design System He4rt Devs',
       description:
