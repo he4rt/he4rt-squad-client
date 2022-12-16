@@ -1,3 +1,1 @@
-<template>
-  wip
-</template>
+<template>wip</template>

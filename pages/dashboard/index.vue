@@ -1,12 +1,14 @@
 <template>
   <div v-motion-dashboard class="min-h-screen w-full bg-h-dark-three overflow-hidden">
     <div class="flex flex-col gap-15 dashboard-sizer">
-      <DashboardHeader>
-        Olá, <span class="font-bold text-lg text-h-purple">Neextur</span>
-      </DashboardHeader>
+      <DashboardHeader> Olá, <span class="font-bold text-lg text-h-purple">Neextur</span> </DashboardHeader>
       <section class="relative bg-h-dark-one min-h-100 w-full">
         <img alt="" class="absolute left-0 top-0 w-full h-40 bg-cover" src="~/assets/dashboard-1.png" />
-        <img alt="" class="relative left-8 top-20 w-24 h-24 rounded-full z-10 border-2 border-h-gray" src="https://i.imgur.com/vlU6ZAZ.jpg"/>
+        <img
+          alt=""
+          class="relative left-8 top-20 w-24 h-24 rounded-full z-10 border-2 border-h-gray"
+          src="https://i.imgur.com/vlU6ZAZ.jpg"
+        />
         <section class="relative flex-col ml-10 top-24 flex gap-5 w-full z-50 min-h-125">
           <div class="flex items-center gap-5">
             <p class="font-bold text-h-light text-lg font-spline">Tropa do Poze</p>
@@ -50,5 +52,5 @@
 </template>
 
 <script>
-+ definePageMeta({ layout: 'dashboard' })
+  ;+definePageMeta({ layout: 'dashboard' })
 </script>

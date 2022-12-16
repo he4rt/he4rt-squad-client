@@ -1,7 +1,5 @@
-<template>
-  wip
-</template>
+<template>wip</template>
 
 <script>
-+ definePageMeta({ layout: 'dashboard' })
+  ;+definePageMeta({ layout: 'dashboard' })
 </script>
