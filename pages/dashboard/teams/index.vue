@@ -7,12 +7,13 @@
         <p class="font-dm text-h-gray w-1/2 leading-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales finibus faucibus. Nunc posuere.
         </p>
-        <button
-          class="flex gap-2 items-center justify-between border-3 border-h-divider text-h-gray font-bold p-2 rounded-lg bg-transparent cursor-pointer transition-colors hover:border-h-light hover:bg-h-light hover:text-h-second-purple"
+        <NuxtLink
+          to="/dashboard/teams/control/register"
+          class="flex gap-2 items-center no-underline justify-between border-3 border-h-divider text-h-gray font-bold p-2 rounded-lg bg-transparent cursor-pointer transition-colors hover:border-h-light hover:bg-h-light hover:text-h-second-purple"
         >
           <IconAdd class="w-6 h-6" />
           Criar time
-        </button>
+        </NuxtLink>
       </div>
       <div class="flex flex-wrap w-full justify-center md:justify-between items-center gap-6">
         <TeamsItem />
