@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
-    '@formkit/nuxt',
     [
       '@pinia/nuxt',
       {
