@@ -14,7 +14,11 @@
         :key="index"
       />
     </div>
-    <div class="flex justify-center font-dm font-bold text-h-second-purple mt-12 cursor-pointer tracking-wide">ver mais</div>
+    <div
+      class="flex justify-center font-dm font-bold text-h-second-purple mt-12 cursor-pointer tracking-wide transition-colors hover:text-h-light"
+    >
+      ver mais
+    </div>
   </div>
 </template>
 
