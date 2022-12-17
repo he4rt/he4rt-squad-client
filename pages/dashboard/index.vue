@@ -10,7 +10,7 @@
           src="https://i.imgur.com/vlU6ZAZ.jpg"
         />
         <section class="relative flex-col ml-10 top-24 flex gap-5 w-full z-50 min-h-125">
-          <div class="flex items-center gap-5">
+          <div class="flex flex-wrap items-center gap-5">
             <p class="font-bold text-h-light text-lg font-spline">Tropa do Poze</p>
             <div class="flex items-center gap-5">
               <div class="p-0.5 bg-h-dark-two rounded">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="flex items-center w-6/7 justify-between border-b border-h-divider pb-5">
+          <div class="flex flex-wrap items-center w-6/7 justify-between border-b border-h-divider pb-5">
             <p class="text-h-gray w-100 leading-8">Earth is the third planet from the Sun and the only astronomical object.</p>
             <div class="flex flex-col gap-3 font-dm-sans">
               <p class="text-h-light text-lg font-bold">000</p>

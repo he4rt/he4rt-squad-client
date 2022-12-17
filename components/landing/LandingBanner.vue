@@ -1,5 +1,5 @@
 <template>
-  <div id="discord" class="flex items-center w-full h-60">
+  <div id="discord" class="flex flex-wrap items-center w-full h-60 ml-10">
     <img class="absolute left-0 w-full h-60 bg-cover" src="~/assets/landing-3.png" />
     <div
       v-motion="{

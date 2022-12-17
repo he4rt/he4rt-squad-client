@@ -123,7 +123,7 @@
               },
             },
           }"
-          class="flex flex-wrap justify-between items-center w-full md:w-5/6"
+          class="flex flex-wrap justify-between items-center w-5/6"
         >
           <img src="~/assets/landing-2.png" alt="Landing 1" />
           <div class="flex flex-col gap-5 w-full lg:w-1/2">
