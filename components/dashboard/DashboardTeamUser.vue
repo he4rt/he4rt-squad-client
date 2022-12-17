@@ -11,9 +11,9 @@
     <div v-else class="flex items-center justify-center rounded-full w-20 h-20 bg-h-divider border-2 border-h-divider" :src="url">
       <IconAdd class="h-8 w-8 text-h-user" />
     </div>
-    <IconAction class="relative left-16 bottom-15">
-      <IconDots class="h-6 w-6 text-h-user" />
-    </IconAction>
+    <ProviderIconButton>
+      <IconDots class="relative left-16 bottom-15 h-6 w-6" />
+    </ProviderIconButton>
     <p v-if="name" class="text-h-light font-bold">{{ name }}</p>
     <p v-else class="text-h-light font-bold">Adicionar Membro</p>
     <p v-if="type" class="text-h-gray">{{ type }}</p>

@@ -11,14 +11,14 @@
         <p class="bg-h-purple text-h-light p-1 text-xs font-bold rounded font-dm">Nv.157</p>
       </div>
       <div class="flex items-center gap-5">
+        <ProviderIconButton>
+          <IconAlert class="w-5 h-5" />
+        </ProviderIconButton>
+        <ProviderIconButton>
+          <IconGear class="w-5 h-5" />
+        </ProviderIconButton>
         <IconAction>
-          <IconAlert class="w-5 h-5 text-h-divider" />
-        </IconAction>
-        <IconAction>
-          <IconGear class="w-5 h-5 text-h-divider" />
-        </IconAction>
-        <IconAction>
-          <IconTrash class="w-6 h-6 text-red-600" />
+          <IconTrash class="w-6 h-6 text-red-600 hover:text-red-900 transition-colors" />
         </IconAction>
       </div>
     </div>

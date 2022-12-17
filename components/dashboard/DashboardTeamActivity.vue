@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full bg-h-dark-one rounded px-5 pt-10 pb-12 mb-12 overflow-y-auto h-200">
+  <div class="flex flex-col w-full bg-h-dark-one rounded px-5 pt-10 pb-12 mb-12 overflow-y-auto h-220">
     <h2 class="font-inter pb-3 border-b border-h-divider font-bold text-h-light text-lg">Registro de Atividades</h2>
     <div class="flex flex-col w-full mt-10 gap-10">
       <DashboardTeamActivityItem

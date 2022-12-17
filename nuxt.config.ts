@@ -26,6 +26,7 @@ export default defineNuxtConfig({
         hDarkOne: '#101010',
         hDarkTwo: '#151515',
         hDarkThree: '#090909',
+        kDarkFour: '#1E1E1E',
         hDivider: '#393939',
         hUser: '#5E5E5E',
         hLight: '#F3F3F3',

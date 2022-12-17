@@ -62,9 +62,9 @@
             <p class="text-h-light">Exibindo:</p>
             <p class="text-h-gray">Maior Nível</p>
           </div>
-          <p class="relative left-12 md:left-15"><IconArrow class="w-6 h-6 text-h-purple transform rotate-90" /></p>
+          <p class="relative left-12 md:left-20"><IconArrow class="w-6 h-6 text-h-purple transform rotate-90" /></p>
         </div>
-        <div class="flex flex-col w-full gap-8 max-h-160 overflow-y-auto overflow-x-hidden pr-12 md:pr-16">
+        <div class="flex flex-col w-full gap-8 max-h-160 overflow-y-auto overflow-x-hidden pr-12 md:pr-22">
           <LandingList />
         </div>
         <NuxtLink to="/teams" class="font-bold no-underline text-center text-h-purple py-12 cursor-pointer"

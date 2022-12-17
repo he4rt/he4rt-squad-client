@@ -8,7 +8,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales finibus faucibus. Nunc posuere.
         </p>
         <button
-          class="flex gap-2 items-center justify-between border-3 border-h-divider text-h-gray font-bold p-2 rounded-lg bg-transparent"
+          class="flex gap-2 items-center justify-between border-3 border-h-divider text-h-gray font-bold p-2 rounded-lg bg-transparent cursor-pointer transition-colors hover:border-h-light hover:bg-h-light hover:text-h-second-purple"
         >
           <IconAdd class="w-6 h-6" />
           Criar time
