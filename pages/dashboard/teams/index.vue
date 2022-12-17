@@ -1,6 +1,6 @@
 <template>
   <div v-motion-dashboard class="min-h-screen w-full bg-h-dark-three">
-    <div class="flex flex-col gap-10 dashboard-sizer">
+    <div class="flex flex-col gap-12 dashboard-sizer">
       <DashboardHeader> Olá, <span class="font-bold text-lg text-h-purple">Neextur</span> </DashboardHeader>
       <p class="font-dm font-bold text-3xl mt-10 text-h-light">Seus times</p>
       <div class="flex w-full justify-between items-start pb-10 border-b border-h-divider">

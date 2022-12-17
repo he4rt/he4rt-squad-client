@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col w-full bg-h-dark-one rounded px-5 py-10">
+  <div class="flex flex-col w-full bg-h-dark-one rounded px-0 md:px-5 py-10">
     <div class="flex items-center justify-between w-full border-b border-h-divider pb-2">
-      <div class="flex gap-5 items-start justify-start">
-        <img class="rounded-full w-14 h-14 border-2 border-h-gray" src="https://i.imgur.com/vlU6ZAZ.jpg" />
+      <div class="flex gap-5 items-start justify-start ml-5 md:ml-0">
+        <img class="rounded-full w-14 h-14 border-2 border-h-gray hidden md:flex" src="https://i.imgur.com/vlU6ZAZ.jpg" />
         <div class="flex flex-col gap-3">
           <p class="text-xl font-bold text-h-light font-inter">Tropa do Poze</p>
           <p class="text-h-light font-dm">Projeto Atual: <span class="text-h-gray">He4rt</span></p>
@@ -10,7 +10,7 @@
         </div>
         <p class="bg-h-purple text-h-light p-1 text-xs font-bold rounded font-dm">Nv.157</p>
       </div>
-      <div class="flex items-center gap-5">
+      <div class="flex items-center gap-5 mr-5 md:mr-0">
         <ProviderIconButton>
           <IconAlert class="w-5 h-5" />
         </ProviderIconButton>
