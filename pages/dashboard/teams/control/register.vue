@@ -1,6 +1,6 @@
 <template>
   <div v-motion-teams class="flex flex-col items-center w-full">
-    <img class="rounded-full w-30 h-30 border-2 border-h-divider my-10" src="https://i.imgur.com/vlU6ZAZ.jpg" />
+    <img class="rounded-full w-30 h-30 border-2 border-h-divider my-10" :src="image" />
     <button
       @click.prevent.stop="onUpload"
       class="text-h-gray font-bold border-2 border-h-divider bg-transparent cursor-pointer p-1.5 rounded-lg"
@@ -43,10 +43,11 @@
   ;+definePageMeta({ layout: 'team' })
 
   const router = useRouter()
+  const image = ref('https://i.imgur.com/vlU6ZAZ.jpg')
 
   const onUpload = async () => {
     const res = useFileSystemAccess({
-      dataType: 'Text',
+      dataType: 'Blob',
       types: [
         {
           accept: {
@@ -59,6 +60,11 @@
 
     await res.open()
 
-    console.log(res.data.value)
+    const reader = new FileReader()
+    reader.readAsDataURL(res.data.value as Blob)
+
+    reader.onload = async () => {
+      image.value = reader.result as string
+    }
   }
 </script>
