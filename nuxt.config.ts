@@ -25,11 +25,12 @@ export default defineNuxtConfig({
         hDarkOne: '#101010',
         hDarkTwo: '#151515',
         hDarkThree: '#090909',
-        kDarkFour: '#1E1E1E',
+        hDarkFour: '#1E1E1E',
         hDivider: '#393939',
         hUser: '#5E5E5E',
         hLight: '#F3F3F3',
         hGray: '#9B9B9B',
+        hGraySelect: '#727272',
       },
     },
   },
@@ -50,6 +51,19 @@ export default defineNuxtConfig({
         },
         enter: {
           x: 0,
+          opacity: 1,
+          transition: {
+            duration: 500,
+          },
+        },
+      },
+      teams: {
+        initial: {
+          y: 50,
+          opacity: 0,
+        },
+        enter: {
+          y: 0,
           opacity: 1,
           transition: {
             duration: 500,

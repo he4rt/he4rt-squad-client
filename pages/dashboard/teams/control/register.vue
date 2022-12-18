@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center w-full">
+  <div v-motion-teams class="flex flex-col items-center w-full">
     <img class="rounded-full w-30 h-30 border-2 border-h-divider my-10" src="https://i.imgur.com/vlU6ZAZ.jpg" />
     <button
       @click.prevent.stop="onUpload"

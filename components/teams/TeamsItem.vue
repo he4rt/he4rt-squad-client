@@ -18,10 +18,11 @@
         <p class="text-h-gray">157</p>
       </div>
     </div>
-    <button
-      class="w-full py-3.5 border-none text-h-light font-semibold font-dm bg-h-second-purple rounded-lg mb-1 cursor-pointer tracking-wide transition-colors hover:bg-h-light hover:text-h-second-purple"
+    <NuxtLink
+      class="no-underline text-center w-full py-3.5 border-none text-h-light font-semibold font-dm bg-h-second-purple rounded-lg mb-1 cursor-pointer tracking-wide transition-colors hover:bg-h-light hover:text-h-second-purple"
+      to="/dashboard/teams/1"
     >
       Ver equipe
-    </button>
+    </NuxtLink>
   </div>
 </template>
