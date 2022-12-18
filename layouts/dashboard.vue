@@ -1,8 +1,17 @@
 <template>
-  <main class="flex min-h-screen w-full overflow-x-hidden antialiased bg-h-dark-three">
+  <main class="flex flex-col lg:flex-row min-h-screen w-full overflow-x-hidden antialiased bg-h-dark-three antialiased">
     <DashboardAside />
     <div class="flex-1 w-full min-h-screen">
       <slot />
     </div>
   </main>
+  <Teleport to="body">
+    <DashboardNotifications v-if="global.dashboard.notifications" />
+  </Teleport>
 </template>
+
+<script setup lang="ts">
+  import { useGlobalStore } from '~~/stores/global'
+
+  const global = useGlobalStore()
+</script>

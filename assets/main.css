@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 * {
   padding: 0;
@@ -7,14 +8,20 @@
   outline: 0;
   font-family: 'Inter', Courier, monospace;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 /* Track */
@@ -25,13 +32,13 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #782BF1;
+  background: #782bf1;
   border-radius: 9999px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #782BF1;
+  background: #782bf1;
 }
 
 .font-spline {
@@ -47,5 +54,5 @@ html {
 }
 
 .landing-backdrop-gradient {
-  background: linear-gradient(180deg, rgba(13, 13, 13, 0.5) -3.48%, #0D0D0D 100%);
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.5) -3.48%, #0d0d0d 100%);
 }

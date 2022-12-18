@@ -1,24 +1,25 @@
 <template>
-  <footer v-motion="{
-    initial: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 100,
-        duration: 500
+  <footer
+    v-motion="{
+      initial: {
+        opacity: 0,
       },
-    }
-  }"  class="flex flex-wrap flex-col items-center justify-center h-75 bg-h-dark-one w-full">
-    <div class="flex flex-wrap justify-center md:justify-around md:gap-5 gap-20 text-h-gray mb-10">
+      visible: {
+        opacity: 1,
+        transition: {
+          delay: 100,
+          duration: 500,
+        },
+      },
+    }"
+    class="flex flex-wrap flex-col items-center justify-center h-75 bg-h-dark-one w-full"
+  >
+    <div class="flex flex-wrap justify-around gap-4 md:gap-20 text-h-gray mb-10">
       <a class="text-h-gray no-underline cursor-pointer" href="#home">Início</a>
       <a class="text-h-gray no-underline cursor-pointer" href="#ranking">Ranking</a>
       <a class="text-h-gray no-underline cursor-pointer" href="#about">Sobre</a>
       <a class="text-h-gray no-underline cursor-pointer" href="#discord">Discord</a>
-      <NuxtLink class="text-h-gray no-underline cursor-pointer" to="/dashboard">
-        Dashboard
-      </NuxtLink>
+      <NuxtLink class="text-h-gray no-underline cursor-pointer" to="/dashboard"> Dashboard </NuxtLink>
     </div>
     <div class="flex gap-20 text-h-gray mb-10">
       <IconInstagram class="text-h-gray w-8 h-8 cursor-pointer" />

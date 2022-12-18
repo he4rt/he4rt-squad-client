@@ -1,6 +1,7 @@
 # He4rt Squad Frontend
 
-A `Nuxt 3 + UnoCSS + VueUse` study.
+- Nuxt 3
+- UnoCSS
 
 ## Setup
 
@@ -31,3 +32,5 @@ Locally preview production build:
 ```bash
 pnpm preview
 ```
+
+## Contributors

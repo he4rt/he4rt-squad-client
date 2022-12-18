@@ -1,10 +1,10 @@
 <template>
-  <div class="w-62.5 min-h-screen overflow-y-auto bg-h-dark-one overflow-x-hidden shadow">
+  <div class="top-0 left-0 w-full lg:w-62.5 h-auto lg:min-h-screen overflow-y-auto bg-h-dark-one overflow-x-hidden shadow z-50">
     <div class="flex items-center justify-center h-20 bg-h-purple w-full">
-      <img src="~/assets/he4rt-1.svg" />
+      <img class="cursor-pointer" @click.prevent.stop="router.push('/')" src="~/assets/he4rt-1.svg" />
     </div>
-    <div class="flex flex-col w-full text-h-gray font-bold">
-      <div class="ml-10 py-8 text-h-light">Menu</div>
+    <div class="flex flex-row lg:flex-col w-full text-h-gray font-bold">
+      <div class="ml-10 py-8 text-h-light hidden lg:flex">Menu</div>
       <DashboardAsideItem to="/dashboard/conquests">
         <template #icon>
           <IconStar class="w-6 h-6" />
@@ -17,11 +17,11 @@
         </template>
         Seus times
       </DashboardAsideItem>
-      <DashboardAsideItem to="/dashboard/control">
+      <DashboardAsideItem to="/dashboard/teams/1">
         <template #icon>
           <IconGear class="w-6 h-6" />
         </template>
-        Gerenciar times
+        Gerenciar time
       </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard">
         <template #icon>
@@ -29,7 +29,7 @@
         </template>
         Perfil
       </DashboardAsideItem>
-      <DashboardAsideItem to="/quit">
+      <DashboardAsideItem to="/">
         <template #icon>
           <IconLogout class="w-6 h-6" />
         </template>
@@ -38,3 +38,7 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+  const router = useRouter()
+</script>
