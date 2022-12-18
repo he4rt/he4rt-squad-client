@@ -31,6 +31,7 @@ export default defineNuxtConfig({
         hLight: '#F3F3F3',
         hGray: '#9B9B9B',
         hGraySelect: '#727272',
+        hDashboardAside: 'rgba(0,0,0,0.5)',
       },
     },
   },

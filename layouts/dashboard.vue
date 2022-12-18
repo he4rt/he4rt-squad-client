@@ -5,4 +5,13 @@
       <slot />
     </div>
   </main>
+  <Teleport to="body">
+    <DashboardNotifications v-if="global.dashboard.notifications" />
+  </Teleport>
 </template>
+
+<script setup lang="ts">
+  import { useGlobalStore } from '~~/stores/global'
+
+  const global = useGlobalStore()
+</script>
