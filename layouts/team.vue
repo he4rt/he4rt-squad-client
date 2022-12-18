@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen w-full bg-h-dark-two py-20">
+  <div class="flex flex-col min-h-screen w-full bg-h-dark-two py-20 antialiased">
     <div class="px-10">
       <h1 class="text-3xl font-bold text-h-light pb-8 border-b-2 border-h-divider">
         Gerenciar: <span class="text-3xl font-bold text-h-second-purple">Tropa do Poze</span>

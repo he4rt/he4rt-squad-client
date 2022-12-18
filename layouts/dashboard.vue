@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col lg:flex-row min-h-screen w-full overflow-x-hidden antialiased bg-h-dark-three">
+  <main class="flex flex-col lg:flex-row min-h-screen w-full overflow-x-hidden antialiased bg-h-dark-three antialiased">
     <DashboardAside />
     <div class="flex-1 w-full min-h-screen">
       <slot />

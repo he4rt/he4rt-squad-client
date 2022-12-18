@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full overflow-hidden" v-motion-teams>
-    <div class="flex flex-col gap-10 w-full mt-5 h-120 pr-2 md:pr-5 overflow-y-auto">
+    <div class="flex flex-col gap-10 w-full mt-5 h-120 overflow-y-auto">
       <TeamsAcceptRoles />
       <TeamsAcceptRoles />
       <TeamsAcceptRoles />

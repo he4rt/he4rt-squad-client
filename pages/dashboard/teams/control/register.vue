@@ -39,11 +39,13 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
   ;+definePageMeta({ layout: 'team' })
 
   const router = useRouter()
   const image = ref('https://i.imgur.com/vlU6ZAZ.jpg')
+  const file = useFile()
 
   const onUpload = async () => {
     const res = useFileSystemAccess({
@@ -60,11 +62,11 @@
 
     await res.open()
 
-    const reader = new FileReader()
-    reader.readAsDataURL(res.data.value as Blob)
-
-    reader.onload = async () => {
-      image.value = reader.result as string
-    }
+    file
+      .readBlobToBase64(res.data.value as Blob)
+      .then((result) => {
+        image.value = result
+      })
+      .catch(() => {})
   }
 </script>

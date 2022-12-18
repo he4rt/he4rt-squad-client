@@ -20,7 +20,5 @@
 </template>
 
 <script setup lang="ts">
-  import { useGlobalStore } from '~~/stores/global'
-
   const global = useGlobalStore()
 </script>

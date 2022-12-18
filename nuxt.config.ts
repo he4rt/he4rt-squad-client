@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  imports: {
+    dirs: ['stores', 'composables'],
+  },
   css: ['@/assets/main.css'],
   modules: [
     '@unocss/nuxt',

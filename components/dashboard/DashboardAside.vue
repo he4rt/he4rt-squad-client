@@ -29,7 +29,7 @@
         </template>
         Perfil
       </DashboardAsideItem>
-      <DashboardAsideItem to="/quit">
+      <DashboardAsideItem to="/">
         <template #icon>
           <IconLogout class="w-6 h-6" />
         </template>
