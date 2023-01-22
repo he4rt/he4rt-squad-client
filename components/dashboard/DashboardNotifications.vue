@@ -1,9 +1,9 @@
 <template>
   <aside
-    class="fixed px-2 py-5 flex items-center flex-col gap-10 top-0 right-0 bg-h-dashboard-aside backdrop-blur h-screen overflow-y-auto w-full md:w-100 z-999999"
+    class="pos[fixed top-0 right-0] p[1.25rem 0.5rem] flex[col v-center gap-2rem] bg:h-dashboard-aside filter[backdrop blur-16px] h:100vh scroll:y w:full z:999999 md(w:400px)"
   >
-    <div @click.prevent.stop="global.dashboard.notifications = false" class="flex w-full justify-end cursor-pointer">
-      <IconClose class="relative h-8 w-8 text-h-light" />
+    <div @click.prevent.stop="global.dashboard.notifications = false" class="flex[v-center h-end] w:full style:cursor-pointer">
+      <IconClose class="pos:relative h:2rem w:2rem text:h-light" />
     </div>
     <MaterialCard
       title="Notificação da He4rt"

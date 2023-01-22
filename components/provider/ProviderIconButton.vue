@@ -1,5 +1,5 @@
 <template>
-  <div class="text-h-divider hover:text-h-light transition-colors cursor-pointer">
+  <div class="text:h-divider style:cursor-pointer">
     <slot />
   </div>
 </template>

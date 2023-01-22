@@ -1,7 +1,7 @@
 <template>
-  <main class="flex flex-col lg:flex-row min-h-screen w-full overflow-x-hidden antialiased bg-h-dark-three antialiased">
+  <main class="flex:col h[min 100vh] w:full scroll:hidden bg:h-dark-three lg(flex:row)">
     <DashboardAside />
-    <div class="flex-1 w-full min-h-screen">
+    <div class="flex[? flex-1] w:full h[max 100vh]">
       <slot />
     </div>
   </main>

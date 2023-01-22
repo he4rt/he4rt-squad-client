@@ -1,37 +1,39 @@
 <template>
-  <div class="top-0 left-0 w-full lg:w-62.5 h-auto lg:min-h-screen overflow-y-auto bg-h-dark-one overflow-x-hidden shadow z-50">
-    <div class="flex items-center justify-center h-20 bg-h-purple w-full">
-      <img class="cursor-pointer" @click.prevent.stop="router.push('/')" src="~/assets/he4rt-1.svg" />
+  <div
+    class="pos[relative top-0 left-0] w:full h[min 100%] scroll[y auto] scroll[x hidden] bg:h-dark-one z:50 lg(w:15.625rem h[min 100vh])"
+  >
+    <div class="flex[v-center h-center] w:full h:5rem bg:h-purple">
+      <img class="style:cursor-pointer" @click.prevent.stop="router.push('/')" src="~/assets/he4rt-1.svg" />
     </div>
-    <div class="flex flex-row lg:flex-col w-full text-h-gray font-bold">
-      <div class="ml-10 py-8 text-h-light hidden lg:flex">Menu</div>
+    <div class="flex:row text[h-gray 700 1rem] w:full lg(flex:col)">
+      <div class="hidden-in-mobile m[2rem 2.5rem] text:h-light">Menu</div>
       <DashboardAsideItem to="/dashboard/conquests">
         <template #icon>
-          <IconStar class="w-6 h-6" />
+          <IconStar class="w:1.5rem h:1.5rem" />
         </template>
         Conquistas
       </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard/teams">
         <template #icon>
-          <IconGroup class="w-6 h-6" />
+          <IconGroup class="w:1.5rem h:1.5rem" />
         </template>
         Seus times
       </DashboardAsideItem>
-      <DashboardAsideItem to="/dashboard/teams/1">
+      <DashboardAsideItem to="/dashboard/teams/id">
         <template #icon>
-          <IconGear class="w-6 h-6" />
+          <IconGear class="w:1.5rem h:1.5rem" />
         </template>
         Gerenciar time
       </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard">
         <template #icon>
-          <IconUser class="w-6 h-6" />
+          <IconUser class="w:1.5rem h:1.5rem" />
         </template>
         Perfil
       </DashboardAsideItem>
       <DashboardAsideItem to="/">
         <template #icon>
-          <IconLogout class="w-6 h-6" />
+          <IconLogout class="w:1.5rem h:1.5rem" />
         </template>
         Sair
       </DashboardAsideItem>

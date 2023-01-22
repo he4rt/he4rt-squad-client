@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-wrap items-center justify-between p-5 shadow bg-h-dark-four rounded">
+  <div class="flex[wrap v-center h-between] p:1.25rem bg:h-dark-four rounded:0.25rem">
     <TeamsUserInfo />
-    <div class="flex items-center gap-8">
-      <select class="w-30 bg-transparent border-2 border-h-gray-select rounded text-h-gray-select px-5 py-1.5">
+    <div class="flex[v-center gap-2rem]">
+      <select class="w:7.5rem bg:transparent border[2 h-gray-select solid] rounded:0.25rem text:h-gray-select p[0.35rem 1.25rem]">
         <option>UI/UX</option>
       </select>
     </div>

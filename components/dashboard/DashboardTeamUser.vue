@@ -1,22 +1,18 @@
 <template>
-  <div class="flex flex-col gap-3 justify-center items-center w-full py-10">
-    <img v-if="url" class="rounded-full w-20 h-20 border-2 border-h-divider" :src="url" />
-    <div
-      v-else-if="name"
-      class="flex items-center justify-center rounded-full w-20 h-20 bg-h-divider border-2 border-h-divider"
-      :src="url"
-    >
-      <IconUser class="h-8 w-8 text-h-user" />
+  <div class="flex[col gap-3px v-center h-center] w:full p[2.5rem 0]">
+    <img v-if="url" class="rounded:9999px w:5rem h:5rem border[2 solid h-divider]" :src="url" />
+    <div v-else-if="name" class="flex[v-center h-center] rounded:9999px w:5rem h:5rem border[2px solid h-divider]" :src="url">
+      <IconUser class="h:2rem w:2rem text:h-user" />
     </div>
-    <div v-else class="flex items-center justify-center rounded-full w-20 h-20 bg-h-divider border-2 border-h-divider" :src="url">
-      <IconAdd class="h-8 w-8 text-h-user" />
+    <div v-else class="flex[v-center h-center] rounded:9999px w:5rem h:5rem border[2px solid h-divider]" :src="url">
+      <IconAdd class="h:2rem w:2rem text:h-user" />
     </div>
     <ProviderIconButton>
-      <IconDots class="relative left-16 bottom-15 h-6 w-6" />
+      <IconDots class="pos[relative left-4rem bottom-3.75rem] h:1.5rem w:1.5rem" />
     </ProviderIconButton>
-    <p v-if="name" class="text-h-light font-bold">{{ name }}</p>
-    <p v-else class="text-h-light font-bold">Adicionar Membro</p>
-    <p v-if="type" class="text-h-gray">{{ type }}</p>
+    <p v-if="name" class="text[h-light 1rem 700]">{{ name }}</p>
+    <p v-else class="text[h-light 1rem 700]">Adicionar Membro</p>
+    <p v-if="type" class="text:h-gray">{{ type }}</p>
   </div>
 </template>
 

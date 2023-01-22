@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="reset:novout">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

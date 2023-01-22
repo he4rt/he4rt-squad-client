@@ -1,5 +1,6 @@
 <template>
   <header
+    class="flex[row h-between v-center] w:83% z:10"
     v-motion="{
       initial: {
         y: 100,
@@ -13,24 +14,22 @@
         },
       },
     }"
-    class="flex justify-between items-center w-5/6 z-10"
   >
-    <section class="flex gap-15">
+    <section class="flex[row gap-60px]">
       <NuxtLink
-        class="no-underline text-h-light text-base md:text-xl font-bold"
-        exactActiveClass="text-h-purple border-b-3 border-h-purple pb-2"
+        class="typo:decoration-none text[h-purple base 700] md(text[h-purple xl 700])"
         to="#home"
       >
         Início
       </NuxtLink>
-      <NuxtLink class="no-underline text-h-light md:text-xl font-bold" to="#ranking"> Ranking </NuxtLink>
-      <NuxtLink class="no-underline text-h-light md:text-xl font-bold" to="#about"> Sobre </NuxtLink>
-      <NuxtLink class="no-underline text-h-light md:text-xl font-bold" to="#discord"> Nosso Discord </NuxtLink>
+      <NuxtLink class="landing-header-item" to="#ranking"> Ranking </NuxtLink>
+      <NuxtLink class="landing-header-item" to="#about"> Sobre </NuxtLink>
+      <NuxtLink class="landing-header-item" to="#discord"> Nosso Discord </NuxtLink>
     </section>
-    <section class="hidden md:flex">
+    <section class="hidden-in-mobile">
       <NuxtLink
         to="/dashboard"
-        class="px-8 py-4 bg-transparent no-underline text-h-light hover:text-black rounded-lg border-3 border-white font-bold tracking-wider cursor-pointer hover:bg-white transition-colors"
+        class="p[1rem 2rem] bg:transparent typo[no-underline lspacing-0.05em] text[h-light 1rem 700] rounded:0.5rem border[2 white solid] hover(bg:white text:black)"
       >
         Acessar Dashboard
       </NuxtLink>

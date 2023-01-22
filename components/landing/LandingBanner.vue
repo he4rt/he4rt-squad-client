@@ -1,7 +1,8 @@
 <template>
-  <div id="discord" class="flex flex-wrap items-center w-full h-60 ml-10">
-    <img class="absolute left-0 w-full h-60 bg-cover" src="~/assets/landing-3.png" />
+  <div id="discord" class="flex[wrap v-center] w:full h:15rem m[l 2.5rem]">
+    <img class="pos[absolute left-0] w:100% h:15rem bg:cover" src="~/assets/landing-3.png" />
     <div
+      class="z:10"
       v-motion="{
         initial: {
           x: -50,
@@ -16,18 +17,18 @@
           },
         },
       }"
-      class="z-10"
     >
-      <div class="text-3xl">
-        <p class="text-3xl text-white">Venha fazer parte da</p>
-        <p class="font-bold text-h-purple text-3xl mt-2">He4rt Devs</p>
-        <p class="w-3/4 mt-5 text-h-gray leading-6 md:leading-8 hidden md:flex">
+      <div class="text:3xl">
+        <p class="text[3xl h-light]">Venha fazer parte da</p>
+        <p class="text[700 3xl h-purple] m[t 0.5rem]">He4rt Devs</p>
+        <p class="w:75% m[t 1.25rem] text:h-gray hidden-in-mobile">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue, velit sed scelerisque consequat, elit sem
           consequat erat, quis mollis nibh lacus eget mauris.
         </p>
       </div>
     </div>
     <div
+      class="z:10"
       v-motion="{
         initial: {
           x: 50,
@@ -42,7 +43,6 @@
           },
         },
       }"
-      class="z-10"
     >
       <MaterialBtn>Entrar no Discord</MaterialBtn>
     </div>

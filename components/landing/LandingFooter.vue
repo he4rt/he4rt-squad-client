@@ -1,5 +1,6 @@
 <template>
   <footer
+    class="flex[wrap col v-center h-center] h:19rem bg:h-dark-one w:full"
     v-motion="{
       initial: {
         opacity: 0,
@@ -12,21 +13,26 @@
         },
       },
     }"
-    class="flex flex-wrap flex-col items-center justify-center h-75 bg-h-dark-one w-full"
   >
-    <div class="flex flex-wrap justify-around gap-4 md:gap-20 text-h-gray mb-10">
-      <a class="text-h-gray no-underline cursor-pointer" href="#home">Início</a>
-      <a class="text-h-gray no-underline cursor-pointer" href="#ranking">Ranking</a>
-      <a class="text-h-gray no-underline cursor-pointer" href="#about">Sobre</a>
-      <a class="text-h-gray no-underline cursor-pointer" href="#discord">Discord</a>
-      <NuxtLink class="text-h-gray no-underline cursor-pointer" to="/dashboard"> Dashboard </NuxtLink>
+  <div class="flex[wrap h-around gap-8px] md(flex[wrap h-around gap-60px]) text:h-gray m[b 2.5rem]">
+    <a class="footer-link" href="#home">Início</a>
+    <a class="footer-link" href="#ranking">Ranking</a>
+    <a class="footer-link" href="#about">Sobre</a>
+    <a class="footer-link" href="#discord">Discord</a>
+    <NuxtLink class="footer-link" to="/dashboard"> Dashboard </NuxtLink>
+  </div>
+  <div class="flex[gap-20px text:h-gray] m[b 2.5rem]">
+    <a target="_blank" href="https://www.instagram.com/heartdevs/">
+        <IconInstagram class="footer-social" />
+      </a>
+      <a target="_blank" href="https://twitter.com/he4rtdevs/">
+        <IconTwitter class="footer-social" />
+      </a>
+      <a target="_blank" href="https://github.com/he4rt">
+        <IconGithub class="footer-social" />
+      </a>
     </div>
-    <div class="flex gap-20 text-h-gray mb-10">
-      <IconInstagram class="text-h-gray w-8 h-8 cursor-pointer" />
-      <IconTwitter class="text-h-gray w-8 h-8 cursor-pointer" />
-      <IconGithub class="text-h-gray w-8 h-8 cursor-pointer" />
-    </div>
-    <div class="w-5/6 h-0.5 bg-h-divider mb-5" />
-    <p class="text-h-light w-80 text-center">© 2022 He4rt Devs. Todos os direitos reservados.</p>
+    <div class="w:83% h:0.125rem bg:h-divider m[b 1.25rem]" />
+    <p class="text[h-light center] w:300px">© 2022 He4rt Devs. Todos os direitos reservados.</p>
   </footer>
 </template>

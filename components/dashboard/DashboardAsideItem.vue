@@ -1,11 +1,11 @@
 <template>
   <NuxtLink
-    class="flex pl-0 lg:pl-10 gap-3 no-underline justify-center lg:justify-start items-center text-h-gray w-full py-5 hover:bg-h-dark-two hover:text-h-light cursor-pointer"
+    class="flex[gap-5px h-center v-center] text[h-gray] typo[decoration-none] style[cursor-pointer] w:full p:1.25rem lg(p[1.25rem 0 1.25rem 2.5rem] flex[gap-1.5rem h-start v-center])"
     :to="to"
-    exactActiveClass="bg-h-dark-two !text-h-light"
+    exactActiveClass="bg:h-dark-two text[! h-light]"
   >
     <slot name="icon" />
-    <div class="hidden lg:flex">
+    <div class="hidden-in-mobile">
       <slot />
     </div>
   </NuxtLink>

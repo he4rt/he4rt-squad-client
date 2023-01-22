@@ -1,37 +1,37 @@
 <template>
-  <div v-motion-teams class="flex flex-col items-center w-full">
-    <img class="rounded-full w-30 h-30 border-2 border-h-divider my-10" :src="image" />
+  <div v-motion-teams class="flex[col v-center] w:full">
+    <img class="rounded:9999px w:7.5rem h:7.5rem m[2.5rem 0]" :src="image" />
     <button
       @click.prevent.stop="onUpload"
-      class="text-h-gray font-bold border-2 border-h-divider bg-transparent cursor-pointer p-1.5 rounded-lg"
+      class="text[h-gray 1rem 700] border[h-gray 1 solid] bg:transparent style:cursor-pointer p:0.375rem rounded:0.5rem"
     >
       Enviar imagem
     </button>
-    <p class="text-h-gray mt-5">Mínimo 80 x 80px - PNG ou JPG.</p>
-    <div class="flex flex-col gap-5 w-full lg:w-1/2">
-      <div class="flex gap-5 flex-wrap items-center w-full justify-between mt-10">
-        <div class="w-full md:w-auto">
-          <p class="text-h-light mb-3 font-dm-sans text-lg font-medium">Nome da Equipe</p>
-          <input type="text" class="w-full bg-transparent p-2 border-2 border-h-divider rounded-lg text-h-light" />
+    <p class="text:h-gray m[t 1.25rem]">Mínimo 80 x 80px - PNG ou JPG.</p>
+    <div class="flex[col gap-1.25rem] w:full lg(w:50%)">
+      <div class="flex[wrap row gap-1.25rem h-between v-center] m[t 2.5rem] w:full">
+        <div class="w:full md(w:reset-none)">
+          <p class="text[h-light dm-sans lg 500] m[b 0.75rem]">Nome da Equipe</p>
+          <input type="text" class="w:full border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
         </div>
-        <div class="w-full md:w-auto">
-          <p class="text-h-light mb-3 font-dm-sans text-lg font-medium">Projeto Atual</p>
-          <input type="text" class="w-full bg-transparent p-2 border-2 border-h-divider rounded-lg text-h-light" />
+        <div class="w:full md(w:reset-none)">
+          <p class="text[h-light lg 500] m[b 0.75rem]">Projeto Atual</p>
+          <input type="text" class="w:full border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
         </div>
       </div>
-      <div class="flex flex-col items-start w-full justify-between">
-        <p class="text-h-light mt-10 mb-3 font-dm-sans text-lg font-medium">Descrição do time</p>
-        <input type="text" class="w-full h-20 bg-transparent p-2 border-2 border-h-divider rounded-lg text-h-light" />
+      <div class="flex[col v-start h-between] w:full">
+        <p class="text[h-light dm-sans 500 lg] m[t 2.5rem]">Descrição do time</p>
+        <input type="text" class="w:full border[h-gray 2 solid] h:5rem bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
       </div>
-      <div class="flex items-center w-full justify-center gap-8 mt-10 font-inter">
+      <div class="flex[v-center h-center gap-2rem] w:full m[t 2.5rem] text:inter">
         <button
           @click="router.push('/dashboard')"
-          class="bg-transparent py-4 px-16 border-3 border-h-divider rounded-lg text-h-gray font-bold cursor-pointer"
+          class="bg:transparent p[1rem 4rem] border[h-gray 1 solid] rounded:0.5rem text[1rem h-gray 700] style:cursor-pointer"
         >
           Descartar
         </button>
         <button
-          class="bg-h-second-purple py-4 px-10 border-3 border-h-second-purple rounded-lg text-h-light font-bold cursor-pointer"
+          class="bg:h-second-purple p[1rem 4rem] border:0 rounded:0.5rem text[1rem h-light 700] style:cursor-pointer"
         >
           Salvar alterações
         </button>

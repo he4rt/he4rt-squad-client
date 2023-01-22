@@ -1,35 +1,38 @@
 <template>
-  <div class="flex flex-col w-full bg-h-dark-one rounded px-0 md:px-5 py-10">
-    <div class="flex items-center justify-between w-full border-b border-h-divider pb-2">
-      <div class="flex gap-5 items-start justify-start ml-5 md:ml-0">
-        <img class="rounded-full w-14 h-14 border-2 border-h-gray hidden md:flex" src="https://i.imgur.com/vlU6ZAZ.jpg" />
-        <div class="flex flex-col gap-3">
-          <p class="text-xl font-bold text-h-light font-inter">Tropa do Poze</p>
-          <p class="text-h-light font-dm">Projeto Atual: <span class="text-h-gray">He4rt</span></p>
-          <p class="text-h-gray font-dm">Squad</p>
+  <div class="flex[col] w:full bg:h-dark-one rounded:0.25rem p[2.5rem 0] md(p[2.5rem 1.25rem])">
+    <div class="flex[v-center h-between] w:full p[b 0.5rem]">
+      <div class="flex[gap-1.25rem v-start h-start] m[l 1.25rem] md(m[l 0])">
+        <img
+          class="hidden-in-mobile rounded:9999px w:3.5rem h:3.5rem border[2px h-gray solid]"
+          src="https://i.imgur.com/vlU6ZAZ.jpg"
+        />
+        <div class="flex[col gap-3px]">
+          <p class="text[xl 700 h-light inter]">Tropa do Poze</p>
+          <p class="text[h-light dm-sans]">Projeto Atual: <span class="text:h-gray">He4rt</span></p>
+          <p class="text[h-gray dm-sans]">Squad</p>
         </div>
-        <p class="bg-h-purple text-h-light p-1 text-xs font-bold rounded font-dm">Nv.157</p>
+        <p class="bg:h-purple text[h-light xs 700 dm-sans] p:0.25rem rounded:0.5rem">Nv.157</p>
       </div>
-      <div class="flex items-center gap-5 mr-5 md:mr-0">
+      <div class="flex[v-center gap-1.25rem] m[r 1.25rem] md(m:0)">
         <ProviderIconButton>
-          <IconAlert class="w-5 h-5" />
+          <IconAlert class="w:1.25rem h:1.25rem" />
         </ProviderIconButton>
         <ProviderIconButton>
-          <IconGear class="w-5 h-5" />
+          <IconGear class="w:1.25rem h:1.25rem" />
         </ProviderIconButton>
         <IconAction>
-          <IconTrash class="w-6 h-6 text-red-600 hover:text-red-900 transition-colors" />
+          <IconTrash class="w:1.5rem h:1.5rem text:#CC0000" />
         </IconAction>
       </div>
     </div>
-    <div class="flex flex-col gap-3 justify-center items-center w-full py-10 border-b border-h-divider">
-      <div class="p-0.6 flex items-center justify-center rounded-full bg-gradient-to-t from-h-second-purple to-h-purple">
-        <img class="rounded-full w-24 h-24" src="https://i.imgur.com/vlU6ZAZ.jpg" />
+    <div class="flex[col gap-3px v-center h-center] w:full p[2.5rem 0]">
+      <div class="p:0.15rem flex[v-center h-center] rounded:9999px">
+        <img class="rounded:9999px w:5rem h:5rem outline[2 h-second-purple solid]" src="https://i.imgur.com/vlU6ZAZ.jpg" />
       </div>
-      <p class="text-h-light font-bold">MC Poze do Rodo</p>
-      <p class="text-h-gray">Chefe</p>
+      <p class="text[h-light 1rem 700]">MC Poze do Rodo</p>
+      <p class="text:h-gray">Chefe</p>
     </div>
-    <div class="flex flex-wrap md:flex-nowrap items-start justify-between w-full">
+    <div class="flex[wrap v-center h-between] md(flex[nowrap v-center h-between]) w:full">
       <DashboardTeamUser url="https://i.imgur.com/vlU6ZAZ.jpg" name="NexturHe4rt" type="UI/UX" />
       <DashboardTeamUser url="https://i.imgur.com/vlU6ZAZ.jpg" name="JoaozinHe4rt" type="Front End" />
       <DashboardTeamUser name="ChiquinHe4rt" type="Back End" />

@@ -1,23 +1,23 @@
 <template>
   <div
     :class="[
-      color === 'success' ? 'border-l-solid border-green-400' : '',
-      color === 'he4rt' ? 'border-l-solid border-h-purple' : '',
+      color === 'success' ? 'border[l solid green]' : '',
+      color === 'he4rt' ? 'border[l solid h-purple]' : '',
     ]"
-    class="w-80 h-42 max-h-60 bg-h-dark-two rounded p-4 box-border text-justify"
+    class="flex[col v-stretch h-between] w:20rem h:10rem bg:h-dark-two rounded:0.25rem p:1rem text:justify"
   >
-    <div class="flex items-center justify-between">
-      <h2 class="text-h-light">{{ title }}</h2>
+    <div class="flex[v-center h-between]">
+      <h2 class="text:h-light">{{ title }}</h2>
       <div>
-        <IconCheck class="w-5 h-5 text-h-purple" />
+        <IconCheck class="w:1.5rem h:1.5rem text:h-purple" />
       </div>
     </div>
-    <p class="text-h-gray pt-4 mb-4">{{ description }}</p>
+    <p class="text:h-gray p[t 1rem] m[b 1rem]">{{ description }}</p>
     <div>
-      <a v-if="color" class="font-bold no-underline text-h-purple cursor-pointer">ver mais</a>
-      <div v-else class="flex items-center justify-between">
-        <button class="font-semibold border text-h-gray bg-transparent py-2 px-6 rounded border-h-gray">Recusar</button>
-        <button class="font-semibold bg-h-purple py-2 px-6 rounded border-none text-h-light">Aceitar</button>
+      <a v-if="color" class="text[700 1rem h-purple] style:cursor-pointer typo:decoration-none">ver mais</a>
+      <div v-else class="flex[v-center h-between]">
+        <button class="text[500 1rem h-gray] border[h-gray solid 1px] bg:transparent p[0.5rem 1.5rem] rounded:0.25rem">Recusar</button>
+        <button class="text[500 1rem h-light] bg:h-purple p[0.5rem 1.5rem] rounded:0.25rem border:0">Aceitar</button>
       </div>
     </div>
   </div>

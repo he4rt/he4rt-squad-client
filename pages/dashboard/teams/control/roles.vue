@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col w-full overflow-hidden" v-motion-teams>
-    <div class="flex flex-col gap-10 w-full mt-5 h-120 overflow-y-auto">
+  <div class="flex[col] w:full scroll:hidden" v-motion-teams>
+    <div class="flex[col gap-2.5rem] w:full m[t 1.25rem] h:30rem scroll[y auto]">
       <TeamsAcceptRoles />
       <TeamsAcceptRoles />
       <TeamsAcceptRoles />
@@ -12,15 +12,15 @@
       <TeamsAcceptRoles />
       <TeamsAcceptRoles />
     </div>
-    <div class="flex items-center w-full justify-center gap-8 mt-10 font-inter">
+    <div class="flex[v-center h-center gap-2rem] w:full m[t 1.5rem]">
       <button
         @click="router.push('/dashboard')"
-        class="bg-transparent py-4 px-16 border-3 border-h-divider rounded-lg text-h-gray font-bold cursor-pointer"
+        class="bg:transparent p[1rem 4rem] rounded:0.5rem text[h-gray 1rem 700] border:white style:cursor-pointer"
       >
         Descartar
       </button>
       <button
-        class="bg-h-second-purple py-4 px-10 border-3 border-h-second-purple rounded-lg text-h-light font-bold cursor-pointer"
+        class="bg:h-second-purple p[1rem 2.5rem] rounded:0.5rem text[h-light 1rem 700] border:0 style:cursor-pointer"
       >
         Salvar alterações
       </button>

@@ -1,5 +1,6 @@
 <template>
   <div
+    class="flex[wrap v-center h-between] w:full border[t 2 h-dark-one] p[t 5rem] p[b 9rem]"
     v-motion="{
       initial: {
         opacity: 0,
@@ -14,7 +15,6 @@
         },
       },
     }"
-    class="flex flex-wrap items-center justify-between w-full border-t-2 border-h-dark-one pt-20 pb-36"
   >
     <LandingCounterItem first="Equipes" second="formadas" />
     <LandingCounterItem first="Membros" second="participando" />

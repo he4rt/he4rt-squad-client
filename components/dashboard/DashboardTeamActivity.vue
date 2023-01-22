@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col w-full bg-h-dark-one rounded px-0 md:px-5 pt-10 pb-12 mb-12 overflow-y-auto h-220">
-    <h2 class="font-inter pb-3 border-b border-h-divider font-bold text-h-light text-lg">Registro de Atividades</h2>
-    <div class="flex flex-col w-full mt-10 gap-10">
+  <div
+    class="flex:col h[max 1100px] scroll[y auto] w:full bg:h-dark-one rounded:0.5rem p[0 2.5rem 0 3rem] md(p[1.5rem 2.5rem 1.rem 3rem])"
+  >
+    <h2 class="text[inter h-light 700 xl] p[t 1.75rem]">Registro de Atividades</h2>
+    <div class="flex[col gap-2.5rem] w:full m[t 2.5rem]">
       <DashboardTeamActivityItem
         :title="item.title"
         :description="item.description"
@@ -15,7 +17,7 @@
       />
     </div>
     <div
-      class="flex justify-center font-dm font-bold text-h-second-purple mt-12 cursor-pointer tracking-wide transition-colors hover:text-h-light"
+      class="flex[h-center v-center] text[dm-sans 700 h-second-purple 1rem] m[2rem 0] style:cursor-pointer hover(text:h-light)"
     >
       ver mais
     </div>

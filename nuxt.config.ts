@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   },
   css: ['@/assets/main.css'],
   modules: [
-    '@unocss/nuxt',
+    'ununura-nuxt',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
     [
@@ -14,29 +14,51 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  unocss: {
-    uno: true,
-    shortcuts: [
-      {
-        'dashboard-sizer': 'pt-6 md:pt-20 px-6 md:px-20 xl:px-30',
-      },
+  ununura: {
+    defines: [
+      ['landing-header-item', 'typo:decoration-none text[h-light base 700] md(text[h-light xl 700])'],
+      ['dashboard-sizer', 'p[1.5rem] md(p[5rem]) xl(p[7.5rem])'],
+      ['footer-link', 'text:h-gray typo[decoration-none] style[cursor-pointer]'],
+      ['footer-social', 'text:h-gray w:2rem h:2rem style[cursor-pointer]'],
+      ['hidden-in-mobile', 'display:none lg(display:inline)']
     ],
-    theme: {
-      colors: {
-        hPurple: '#8D3FFF',
-        hSecondPurple: '#782BF1',
-        hDarkOne: '#101010',
-        hDarkTwo: '#151515',
-        hDarkThree: '#090909',
-        hDarkFour: '#1E1E1E',
-        hDivider: '#393939',
-        hUser: '#5E5E5E',
-        hLight: '#F3F3F3',
-        hGray: '#9B9B9B',
-        hGraySelect: '#727272',
-        hDashboardAside: 'rgba(0,0,0,0.5)',
-      },
-    },
+    extend: {
+      supporters: {
+        fonts: [
+          ['inter', 'Inter'],
+          ['spline-sans', 'Spline Sans'],
+          ['dm-sans', 'DM Sans']
+        ],
+        units: [
+          ['reset-none', 'none'],
+          ['full', '100%'],
+          ['xs', '0.75rem'],
+          ['sm', '0.875rem'],
+          ['base', '1rem'],
+          ['lg', '1.125rem'],
+          ['xl', '1.25rem'],
+          ['2xl', '1.5rem'],
+          ['3xl', '1.75rem'],
+          ['4xl', '2.25rem'],
+          ['5xl', '3rem'],
+          ['6xl', '3.75rem'],
+        ],
+        colors: [
+          ['h-purple', '#8D3FFF'],
+          ['h-second-purple', '#782BF1'],
+          ['h-dark-one', '#101010'],
+          ['h-dark-two', '#151515'],
+          ['h-dark-three', '#090909'],
+          ['h-dark-four', '#1E1E1E'],
+          ['h-divider', '#393939'],
+          ['h-user', '#5E5E5E'],
+          ['h-light', '#F3F3F3'],
+          ['h-gray', '#9B9B9B'],
+          ['h-gray-select', '#727272'],
+          ['h-dashboard-aside', 'rgba(0, 0, 0, 0.5)'],
+        ],
+      }
+    }
   },
   motion: {
     directives: {

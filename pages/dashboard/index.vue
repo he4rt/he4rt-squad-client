@@ -1,50 +1,51 @@
 <template>
-  <div v-motion-dashboard class="min-h-screen w-full bg-h-dark-three overflow-hidden">
-    <div class="flex flex-col gap-15 dashboard-sizer">
-      <DashboardHeader> Olá, <span class="font-bold text-lg text-h-purple">Neextur</span> </DashboardHeader>
-      <section class="relative bg-h-dark-one min-h-100 w-full">
-        <img alt="" class="absolute left-0 top-0 w-full h-40 bg-cover" src="~/assets/dashboard-1.png" />
+  <div v-motion-dashboard class="h[max 100vh] w:100% bg:h-dark-three scroll:y">
+    <div class="dashboard-sizer flex[col gap-3rem]">
+      <DashboardHeader> Olá, <span class="text[700 lg h-purple]">Neextur</span> </DashboardHeader>
+      <section class="pos:relative bg:h-dark-one h[min 100vh] w:full">
+        <img alt="" class="pos[absolute left-0 top-0] w:full h:10rem bg:cover" src="~/assets/dashboard-1.png" />
         <img
           alt=""
-          class="relative left-8 top-20 w-24 h-24 rounded-full z-10 border-2 border-h-gray"
+          class="pos[relative left-2rem top-5rem] w:6rem h:6rem rounded:9999px z:10 border[2px solid h-gray]"
           src="https://i.imgur.com/vlU6ZAZ.jpg"
         />
-        <section class="relative flex-col ml-10 top-24 flex gap-5 w-full z-50 min-h-125">
-          <div class="flex flex-wrap items-center gap-5">
-            <p class="font-bold text-h-light text-lg font-spline">Tropa do Poze</p>
-            <div class="flex items-center gap-5">
-              <div class="p-0.5 bg-h-dark-two rounded">
-                <IconFire class="w-4 h-4 text-red-600" />
+        <section class="pos[relative top-6rem] flex[gap-1.25rem] m[l 2.5rem] flex[col gap-1.25rem] h[min 500px] w:full z:50">
+          <div class="flex[wrap v-center gap-1.25rem]">
+            <p class="text[dm-spline lg 700 h-light]">Tropa do Poze</p>
+            <div class="flex[h-center gap-1.25rem]">
+              <div class="p:0.125rem bg:h-dark-two rounded:0.25rem">
+                <IconFire class="w[1rem] h[1rem] text:#CC0000" />
               </div>
-              <div class="p-0.5 bg-h-dark-two rounded">
-                <IconFire class="w-4 h-4 text-red-600" />
+              <div class="p:0.125rem bg:h-dark-two rounded:0.25rem">
+                <IconFire class="w-4 h-41 text:#CC0000" />
               </div>
-              <div class="p-0.5 bg-h-dark-two rounded">
-                <IconFire class="w-4 h-4 text-red-600" />
+              <div class="p:0.125rem bg:h-dark-two rounded:0.25rem">
+                <IconFire class="w:1rem h:1rem text:#CC0000" />
               </div>
-              <div class="p-0.5 bg-h-dark-two rounded">
-                <IconFire class="w-4 h-4 text-red-600" />
+              <div class="p:0.125rem bg:h-dark-two rounded:0.25rem">
+                <IconFire class="w:1rem h:1rem text:#CC0000" />
               </div>
-              <div class="p-0.5 bg-h-dark-two rounded">
-                <IconFire class="w-4 h-4 text-red-600" />
+              <div class="p:0.125rem bg:h-dark-two rounded:0.25rem">
+                <IconFire class="w:1rem h:1rem text:#CC0000" />
               </div>
             </div>
           </div>
-          <div class="flex flex-wrap items-center w-6/7 justify-between border-b border-h-divider pb-5">
-            <p class="text-h-gray w-100 leading-8">Earth is the third planet from the Sun and the only astronomical object.</p>
-            <div class="flex flex-col gap-3 font-dm-sans">
-              <p class="text-h-light text-lg font-bold">000</p>
-              <p class="text-h-gray">Contribuições realizadas</p>
+          <div class="flex[wrap v-center h-start gap-2rem] w:85% p[b 1.25rem]">
+            <p class="text:h-gray w:400px">Earth is the third planet from the Sun and the only astronomical object.</p>
+            <div class="flex[col gap-3px dm-sans]">
+              <p class="text[h-light lg 700]">000</p>
+              <p class="text:h-gray">Contribuições realizadas</p>
             </div>
-            <div class="flex flex-col gap-3 font-dm-sans">
-              <p class="text-h-light text-lg font-bold">000</p>
-              <p class="text-h-gray">Projetos finalizados</p>
+            <div class="flex[col gap-3px dm-sans]">
+              <p class="text[h-light lg 700]">000</p>
+              <p class="text:h-gray">Projetos finalizados</p>
             </div>
-            <div class="flex flex-col gap-3 font-dm-sans">
-              <p class="text-h-light text-lg font-bold">000</p>
-              <p class="text-h-gray">Ranking atual</p>
+            <div class="flex[col gap-3px dm-sans]">
+              <p class="text[h-light lg 700]">000</p>
+              <p class="text:h-gray">Ranking atual</p>
             </div>
           </div>
+          <div class="h:0.05rem w:90% bg:h-divider" />
         </section>
       </section>
     </div>
