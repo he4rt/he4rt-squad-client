@@ -1,5 +1,5 @@
 <template>
-  <div class="flex[col v-center] h[min 100vh] w:100% bg:h-dark-one">
+  <div class="flex[col v-center] h[min 100vh] w:100% bg:h-dark-three">
     <div class="landing-gradient flex[col v-center] h:100vh w:100% p[top 5rem]" id="home">
       <img class="pos[absolute right-0 top-10] w:50% md(w:reset-none)" src="~/assets/logo.svg" alt="He4rt Developers Logo" />
       <LandingHeader />

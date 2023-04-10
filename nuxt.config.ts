@@ -1,10 +1,22 @@
 export default defineNuxtConfig({
+  extends: [
+    'nuxt-seo-kit'
+  ],
   imports: {
     dirs: ['stores', 'composables'],
   },
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',
+      siteName: 'Awesome Site',
+      siteDescription: 'Welcome to my awesome site!',
+      language: 'pt-BR',
+      indexable: true
+    }
+  },
   css: ['@/assets/main.css'],
   modules: [
-    'ununura-nuxt',
+    'nuxt-ununura',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
     [
@@ -16,10 +28,7 @@ export default defineNuxtConfig({
   ],
   ununura: {
     defines: [
-      ['landing-header-item', 'typo:decoration-none text[h-light base 700] md(text[h-light xl 700])'],
       ['dashboard-sizer', 'p[1.5rem] md(p[5rem]) xl(p[7.5rem])'],
-      ['footer-link', 'text:h-gray typo[decoration-none] style[cursor-pointer]'],
-      ['footer-social', 'text:h-gray w:2rem h:2rem style[cursor-pointer]'],
       ['hidden-in-mobile', 'display:none lg(display:inline)']
     ],
     extend: {
@@ -46,7 +55,7 @@ export default defineNuxtConfig({
         colors: [
           ['h-purple', '#8D3FFF'],
           ['h-second-purple', '#782BF1'],
-          ['h-dark-one', '#101010'],
+          ['h-dark-one', 'rgba(255, 255, 255, 0.05)'],
           ['h-dark-two', '#151515'],
           ['h-dark-three', '#090909'],
           ['h-dark-four', '#1E1E1E'],

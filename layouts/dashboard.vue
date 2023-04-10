@@ -4,10 +4,10 @@
     <div class="flex[? flex-1] w:full h[max 100vh]">
       <slot />
     </div>
+    <Teleport to="body">
+      <DashboardNotifications v-if="global.dashboard.notifications" />
+    </Teleport>
   </main>
-  <Teleport to="body">
-    <DashboardNotifications v-if="global.dashboard.notifications" />
-  </Teleport>
 </template>
 
 <script setup lang="ts">

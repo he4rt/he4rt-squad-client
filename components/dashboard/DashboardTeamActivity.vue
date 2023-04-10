@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-  const list = useState('c-list', () => [
+  const list = ref([
     {
       title: '[UI/UX] Criar Design System He4rt Devs',
       description:

@@ -1,5 +1,6 @@
 <template>
-  <div
+  <div>
+    <div
     class="flex[gap-10px h-between v-center wrap] m[b 2rem] p:1.25rem w:full bg:h-dark-two rounded:0.5rem md(flex[gap-30px h-around v-center wrap])"
     v-for="(item, index) in list"
     :key="index"
@@ -34,10 +35,11 @@
     </div>
     <NuxtLink to="/dashboard/teams" class="text[h-purple 1rem 700 center] typo[decoration-none] style:cursor-pointer">Ver equipe</NuxtLink>
   </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-  const list = useState('list', () => [
+  const list = ref([
     {
       name: 'Tropa do Poze',
       image_url: 'https://i.imgur.com/vlU6ZAZ.jpg',
