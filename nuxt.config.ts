@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',
-      siteName: 'Awesome Site',
-      siteDescription: 'Welcome to my awesome site!',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://he4rtsquad.com',
+      siteName: 'He4rt Squad',
+      siteDescription: 'Construa times e experiências. He4rt Developers.',
       language: 'pt-BR',
       indexable: true
     }
