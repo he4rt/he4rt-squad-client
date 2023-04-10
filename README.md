@@ -1,7 +1,7 @@
 # He4rt Squad Frontend
 
 - Nuxt 3
-- UnoCSS
+- UnunuraCSS
 
 ## Setup
 
