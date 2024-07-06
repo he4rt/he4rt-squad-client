@@ -4,22 +4,33 @@
     <div v-else-if="name" class="flex[v-center h-center] rounded:9999px w:5rem h:5rem border[2px solid h-divider]" :src="url">
       <IconUser class="h:2rem w:2rem text:h-user" />
     </div>
-    <div v-else class="flex[v-center h-center] rounded:9999px w:5rem h:5rem border[2px solid h-divider]" :src="url">
-      <IconAdd class="h:2rem w:2rem text:h-user" />
+    <div v-else class="flex[v-center h-center] cursor:pointer rounded:9999px w:5rem h:5rem border[2px solid h-divider]" :src="url">
+      <input v-model="target" placeholder="Nome do Membro" class="border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" type="text" />
     </div>
-    <ProviderIconButton>
-      <IconDots class="pos[relative left-4rem bottom-3.75rem] h:1.5rem w:1.5rem" />
-    </ProviderIconButton>
     <p v-if="name" class="text[h-light 1rem 700]">{{ name }}</p>
-    <p v-else class="text[h-light 1rem 700]">Adicionar Membro</p>
+    <button @click="onInviteMember" v-else class="text[h-light 1rem 700] bg:transparent cursor:pointer">Adicionar Membro</button>
     <p v-if="type" class="text:h-gray">{{ type }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-  defineProps<{
+  const props = defineProps<{
     url?: string
     name?: string
     type?: string
   }>()
+
+  const target = ref('')
+
+  const onInviteMember = async () => {
+    const { data, error } = await useFetch('/teams/invite', {
+      body: {
+        userName: target.value,
+      },
+      baseURL: 'http://localhost:3333',
+      method: 'POST'
+    })
+
+    target.value = ''
+  }
 </script>

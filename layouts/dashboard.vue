@@ -14,4 +14,8 @@
   import { useGlobalStore } from '~~/stores/global'
 
   const global = useGlobalStore()
+
+  definePageMeta({
+    middleware: ["auth"]
+  })
 </script>

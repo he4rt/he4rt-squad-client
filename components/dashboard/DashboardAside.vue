@@ -19,12 +19,6 @@
         </template>
         Seus times
       </DashboardAsideItem>
-      <DashboardAsideItem to="/dashboard/teams/id">
-        <template #icon>
-          <IconGear class="w:1.5rem h:1.5rem" />
-        </template>
-        Gerenciar time
-      </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard">
         <template #icon>
           <IconUser class="w:1.5rem h:1.5rem" />

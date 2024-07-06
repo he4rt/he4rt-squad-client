@@ -9,7 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@pinia/nuxt": "^0.5.1",
     "@vueuse/motion": "2.2.3",
     "@vueuse/nuxt": "^10.11.0",
     "nuxt": "3.3.3",
@@ -17,5 +16,9 @@
     "nuxt-ununura": "^1.6.16",
     "prettier": "^3.3.2",
     "pretty-quick": "^4.0.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "0.4.10",
+    "pinia": "2.0.36"
   }
 }

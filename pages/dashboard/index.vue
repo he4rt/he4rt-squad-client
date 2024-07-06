@@ -1,7 +1,7 @@
 <template>
   <div v-motion-dashboard class="h[max 100vh] w:100% bg:h-dark-three scroll:y">
     <div class="dashboard-sizer flex[col gap-3rem]">
-      <DashboardHeader> Olá, <span class="text[700 lg h-purple]">Neextur</span> </DashboardHeader>
+      <DashboardHeader> Olá, <span class="text[700 lg h-purple]">{{ auth.session?.displayName || 'GUEST' }}</span> </DashboardHeader>
       <section class="pos:relative bg:h-dark-one h[min 100vh] w:full">
         <img alt="" class="pos[absolute left-0 top-0] w:full h:10rem bg:cover" src="~/assets/dashboard-1.png" />
         <img
@@ -52,6 +52,8 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
   ;+definePageMeta({ layout: 'dashboard' })
+
+  const auth = useAuthStore()
 </script>

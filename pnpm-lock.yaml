@@ -7,10 +7,14 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       '@pinia/nuxt':
-        specifier: ^0.5.1
-        version: 0.5.1(rollup@3.20.2)(vue@3.2.47)
+        specifier: 0.4.10
+        version: 0.4.10(rollup@3.20.2)(vue@3.2.47)
+      pinia:
+        specifier: 2.0.36
+        version: 2.0.36(vue@3.2.47)
+    devDependencies:
       '@vueuse/motion':
         specifier: 2.2.3
         version: 2.2.3(rollup@3.20.2)(vue@3.2.47)
@@ -520,8 +524,8 @@ packages:
     peerDependencies:
       vue: ^3.2.47
 
-  '@pinia/nuxt@0.5.1':
-    resolution: {integrity: sha512-6wT6TqY81n+7/x3Yhf0yfaJVKkZU42AGqOR0T3+UvChcaOJhSma7OWPN64v+ptYlznat+fS1VTwNAcbi2lzHnw==}
+  '@pinia/nuxt@0.4.10':
+    resolution: {integrity: sha512-/16Eac9B9BT+LnhGL2np3bO3DXYcIEjUIGmU9MzUu7y2exDYq1eOce4Yt+ZtLpb0hN0BBGNyP0ZWoHJ6KJIVfA==}
 
   '@polka/url@1.0.0-next.21':
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
@@ -2430,12 +2434,12 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
 
-  pinia@2.1.7:
-    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+  pinia@2.0.36:
+    resolution: {integrity: sha512-4UKApwjlmJH+VuHKgA+zQMddcCb3ezYnyewQ9NVrsDqZ/j9dMv5+rh+1r48whKNdpFkZAWVxhBp5ewYaYX9JcQ==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.3.0
+      vue: ^2.6.14 || ^3.2.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
@@ -4140,10 +4144,10 @@ snapshots:
       - vti
       - vue-tsc
 
-  '@pinia/nuxt@0.5.1(rollup@3.20.2)(vue@3.2.47)':
+  '@pinia/nuxt@0.4.10(rollup@3.20.2)(vue@3.2.47)':
     dependencies:
       '@nuxt/kit': 3.12.2(rollup@3.20.2)
-      pinia: 2.1.7(vue@3.2.47)
+      pinia: 2.0.36(vue@3.2.47)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - magicast
@@ -6485,7 +6489,7 @@ snapshots:
 
   pify@2.3.0: {}
 
-  pinia@2.1.7(vue@3.2.47):
+  pinia@2.0.36(vue@3.2.47):
     dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.47

@@ -5,20 +5,11 @@
     <div @click.prevent.stop="global.dashboard.notifications = false" class="flex[v-center h-end] w:full style:cursor-pointer">
       <IconClose class="pos:relative h:2rem w:2rem text:h-light" />
     </div>
-    <MaterialCard
-      title="Notificação da He4rt"
-      description="Earth is the third planet from the Sun and the only..."
-      color="he4rt"
-    />
-    <MaterialCard title="Notificação da He4rt" description="Earth is the third planet from the Sun and the only..." />
-    <MaterialCard
-      title="Notificação da He4rt"
-      description="Earth is the third planet from the Sun and the only..."
-      color="success"
-    />
+    <MaterialCard v-for="item in auth.session.invites" :key="item" title="Notificação da He4rt" description="Earth is the third planet from the Sun and the only..." />
   </aside>
 </template>
 
 <script setup lang="ts">
   const global = useGlobalStore()
+  const auth = useAuthStore()
 </script>

@@ -28,7 +28,6 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien erat, commodo ac accumsan cursus, aliquet in
           libero.
         </p>
-        <MaterialBtn>Entrar com o Discord</MaterialBtn>
       </div>
     </div>
     <div

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex[col gap-2rem] h:100vh scroll:hidden w:full bg:h-dark-two p[5rem 0]">
+  <div class="flex[col gap-2rem] scroll[y auto] h:100vh w:full bg:h-dark-two p[5rem 0]">
     <div class="p[0 2.5rem]">
       <h1 class="text[h-light 3xl 700] p[b 2rem]">
         Gerenciar: <span class="text[3xl 700 h-second-purple]">Tropa do Poze</span>
@@ -36,3 +36,9 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+  middleware: ["auth"]
+})
+</script>

@@ -1,7 +1,7 @@
 <template>
   <div v-motion-dashboard class="h[max 100vh] w:full bg:h-dark-three scroll[y auto]">
     <div class="dashboard-sizer flex[gap-3rem col]">
-      <DashboardHeader> Olá, <span class="text[lg h-purple]">Neextur</span> </DashboardHeader>
+      <DashboardHeader> Olá, <span class="text[lg h-purple]">{{ auth.session.name}}</span> </DashboardHeader>
       <p class="text[h-light dm-sans 700 3xl] m[t 2.5rem]">Seus times</p>
       <div class="flex[h-between v-start] w:full p[b 2.5rem] border[b h-divider 1px]">
         <p class="text[dm-sans 1rem h-gray] w:50%">
@@ -16,14 +16,21 @@
         </NuxtLink>
       </div>
       <div class="flex[wrap h-center v-center gap-1.5rem] w:full md(flex[wrap h-between v-center gap-1.5rem])">
-        <TeamsItem />
-        <TeamsItem />
-        <TeamsItem />
+        <TeamsItem :team="item" v-for="item in data" :key="item.message" />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-  definePageMeta({ layout: 'dashboard' })
+<script setup lang="ts">
+definePageMeta({ layout: 'dashboard' })
+
+const auth = useAuthStore()
+
+const { data, error, refresh } = await useAsyncData(
+  'teams',
+  () => $fetch(`http://localhost:3333/users/teams/${auth.session.uid}`, {
+    method: 'GET'
+  })
+)
 </script>

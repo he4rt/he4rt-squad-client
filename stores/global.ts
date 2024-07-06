@@ -5,6 +5,9 @@ export const useGlobalStore = defineStore({
       dashboard: {
         notifications: false,
       },
+      load: {
+        team: undefined
+      }
     }
   },
 })

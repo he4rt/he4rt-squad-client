@@ -6,7 +6,7 @@
         <IconAlert class="w:1.75rem h:1.75rem text:h-divider style:cursor-pointer" />
       </ProviderIconButton>
       <div class="h:2rem w:0.5rem bg:h-divider" />
-      <p class="m[l 1.25rem] text:h-light">NeexTuRHe4rt</p>
+      <p class="m[l 1.25rem] text:h-light">{{ auth.session?.email || '' }}</p>
       <img class="w:3rem h:3rem rounded:9999px" src="https://i.imgur.com/vlU6ZAZ.jpg" />
     </div>
   </header>
@@ -14,4 +14,5 @@
 
 <script setup lang="ts">
   const global = useGlobalStore()
+  const auth = useAuthStore()
 </script>
