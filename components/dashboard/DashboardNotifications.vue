@@ -5,11 +5,25 @@
     <div @click.prevent.stop="global.dashboard.notifications = false" class="flex[v-center h-end] w:full style:cursor-pointer">
       <IconClose class="pos:relative h:2rem w:2rem text:h-light" />
     </div>
-    <MaterialCard v-for="item in auth.session.invites" :key="item" title="Notificação da He4rt" description="Earth is the third planet from the Sun and the only..." />
+    <DashboardNotificationCard v-for="item in set.invites" @reset="onRemoveItem" :key="item" :title="item" description="Esta equipe quer você no time." />
   </aside>
 </template>
 
 <script setup lang="ts">
   const global = useGlobalStore()
   const auth = useAuthStore()
+  const set = ref([])
+
+  onMounted(async () => {
+    const { data, error } = await useFetch(`http://localhost:3333/users/${auth.session.uid}`, {
+      baseURL: 'http://localhost:3333',
+      method: 'GET'
+    })
+
+    set.value = data.value
+  })
+
+  const onRemoveItem = (team: string) => {
+    set.value.invites = set.value.invites.filter(target => target !== team)
+  }
 </script>

@@ -1,7 +1,15 @@
 <template>
   <div v-motion-dashboard class="h[max 100vh] w:100% bg:h-dark-three scroll:y">
     <div class="dashboard-sizer flex[col gap-3rem]">
-      <DashboardHeader> Olá, <span class="text[700 lg h-purple]">{{ auth.session?.displayName || 'GUEST' }}</span> </DashboardHeader>
+      <DashboardHeader> 
+        <p v-if="!edit">Olá, <span @click="edit = !edit" class="text[700 lg h-purple] cursor:pointer">{{ auth.session?.displayName }}</span> </p>
+        <div class="flex[row jc-center ai-center]" v-else>
+          <input v-model="nickname" @keyup.enter="onChangeNickname" type="text" />
+          <div class="st[cursor-pointer]">
+            <IconEdit @click="onChangeNickname" class="m[0 1rem] w[1.5rem] h[1.5rem] st[cursor-pointer]" />
+          </div>
+        </div>
+      </DashboardHeader>
       <section class="pos:relative bg:h-dark-one h[min 100vh] w:full">
         <img alt="" class="pos[absolute left-0 top-0] w:full h:10rem bg:cover" src="~/assets/dashboard-1.png" />
         <img
@@ -56,4 +64,26 @@
   ;+definePageMeta({ layout: 'dashboard' })
 
   const auth = useAuthStore()
+
+  const edit = ref(false)
+  const nickname = ref(auth.session?.displayName || '')
+
+  const onChangeNickname = async () => {
+    if(!auth.session) return
+
+  const { data, error } = await useFetch('/users/nickname', {
+    body: {
+      id: auth.session.uid,
+      nickname: nickname.value
+    },
+    baseURL: 'http://localhost:3333',
+    method: 'PUT'
+  })
+
+  if(data && !error.value) {
+    auth.session.displayName = nickname.value
+  }
+
+  edit.value = false
+}
 </script>

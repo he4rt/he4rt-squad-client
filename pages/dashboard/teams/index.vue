@@ -16,13 +16,13 @@
         </NuxtLink>
       </div>
       <div class="flex[wrap h-center v-center gap-1.5rem] w:full md(flex[wrap h-between v-center gap-1.5rem])">
-        <TeamsItem :team="item" v-for="item in data" :key="item.message" />
+        <TeamsItem @reset="onRemoveTeamItem" :team="item" v-for="item in data" :key="item.message" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 definePageMeta({ layout: 'dashboard' })
 
 const auth = useAuthStore()
@@ -33,4 +33,10 @@ const { data, error, refresh } = await useAsyncData(
     method: 'GET'
   })
 )
+
+const onRemoveTeamItem = (team) => {
+  data.value = data.value.filter(el => {
+    el.name !== team.name
+  });
+}
 </script>

@@ -32,7 +32,7 @@
     </div>
     <div class="flex[wrap v-center h-between] md(flex[nowrap v-center h-between]) w:full">
       <DashboardTeamUser v-for="item in data" :key="item.name" :url="item.image" :name="item.displayName" type="Front End" />
-      <DashboardTeamUser v-if="members.length < 4" />
+      <DashboardTeamUser :teamName="global.load.team.name" v-if="members.length < 4" />
     </div>
   </div>
 </template>

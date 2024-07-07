@@ -18,6 +18,7 @@
     url?: string
     name?: string
     type?: string
+    teamName?: string
   }>()
 
   const target = ref('')
@@ -26,6 +27,7 @@
     const { data, error } = await useFetch('/teams/invite', {
       body: {
         userName: target.value,
+        teamName: props.teamName
       },
       baseURL: 'http://localhost:3333',
       method: 'POST'
