@@ -7,12 +7,6 @@
     </div>
     <div class="flex:row text[h-gray 700 1rem] w:full lg(flex:col)">
       <div class="hidden-in-mobile m[2rem 2.5rem] text:h-light">Menu</div>
-      <DashboardAsideItem to="/dashboard/conquests">
-        <template #icon>
-          <IconStar class="w:1.5rem h:1.5rem" />
-        </template>
-        Conquistas
-      </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard/teams">
         <template #icon>
           <IconGroup class="w:1.5rem h:1.5rem" />
@@ -21,9 +15,9 @@
       </DashboardAsideItem>
       <DashboardAsideItem to="/dashboard">
         <template #icon>
-          <IconUser class="w:1.5rem h:1.5rem" />
+          <IconProject class="w:1.5rem h:1.5rem" />
         </template>
-        Perfil
+        Projetos
       </DashboardAsideItem>
       <DashboardAsideItem to="/">
         <template #icon>

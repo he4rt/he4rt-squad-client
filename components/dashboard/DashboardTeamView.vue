@@ -13,14 +13,11 @@
       </div>
       <div class="flex[v-center gap-1.25rem] m[r 1.25rem] md(m:0)">
         <ProviderIconButton>
-          <IconAlert class="w:1.25rem h:1.25rem" />
-        </ProviderIconButton>
-        <ProviderIconButton>
           <IconGear class="w:1.25rem h:1.25rem" />
         </ProviderIconButton>
-        <IconAction>
+        <ProviderIconButton>
           <IconTrash class="w:1.5rem h:1.5rem text:#CC0000" />
-        </IconAction>
+        </ProviderIconButton>
       </div>
     </div>
     <div class="flex[col gap-3px v-center h-center] w:full p[2.5rem 0]">
@@ -31,14 +28,15 @@
       <p class="text:h-gray">Chefe</p>
     </div>
     <div class="flex[wrap v-center h-between] md(flex[nowrap v-center h-between]) w:full">
-      <DashboardTeamUser v-for="item in data" :key="item.name" :url="item.image" :name="item.displayName" type="Front End" />
-      <DashboardTeamUser :teamName="global.load.team.name" v-if="members.length < 4" />
+      <DashboardTeamUser v-for="item in members" :key="item.displayName" :url="item.image" :name="item.displayName" type="Front End" />
+      <DashboardTeamUser :teamName="global.load.team.name" v-if="members.length < 4 && global.load.team.ownerId === auth.session.uid" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const global = useGlobalStore()
+const auth = useAuthStore()
 const owner = ref('')
 const members = ref([])
 
@@ -50,7 +48,7 @@ onMounted(async() => {
 
   owner.value = data.value[0].displayName
 
-  data.value.unshift()
+  data.value.shift()
 
   members.value = data.value
 })
