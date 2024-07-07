@@ -20,5 +20,6 @@
   "dependencies": {
     "@pinia/nuxt": "0.4.10",
     "pinia": "2.0.36"
-  }
+  },
+  "packageManager": "pnpm@9.4.0"
 }
