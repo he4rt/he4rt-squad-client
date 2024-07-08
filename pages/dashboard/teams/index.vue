@@ -1,11 +1,11 @@
 <template>
   <div v-motion-dashboard class="h[max 100vh] w:full bg:h-dark-three scroll[y auto]">
     <div class="dashboard-sizer flex[gap-3rem col]">
-      <DashboardHeader> Olá, <span class="text[lg h-purple]">{{ auth.session.name}}</span> </DashboardHeader>
+      <DashboardHeader> Olá, <span class="text[lg h-purple]">{{ auth.session.name }}</span> </DashboardHeader>
       <p class="text[h-light dm-sans 700 3xl] m[t 2.5rem]">Seus times</p>
       <div class="flex[h-between v-start] w:full p[b 2.5rem] border[b h-divider 1px]">
         <p class="text[dm-sans 1rem h-gray] w:50%">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales finibus faucibus. Nunc posuere.
+          Gerencie os times em que você participa ou crie novos!
         </p>
         <NuxtLink
           to="/dashboard/teams/control/register"
@@ -35,8 +35,6 @@ const { data, error, refresh } = await useAsyncData(
 )
 
 const onRemoveTeamItem = (team) => {
-  data.value = data.value.filter(el => {
-    el.name !== team.name
-  });
+  data.value = data.value.filter(el => el.name !== team);
 }
 </script>

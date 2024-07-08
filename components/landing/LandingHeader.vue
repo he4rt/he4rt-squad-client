@@ -28,7 +28,7 @@
     </section>
     <section v-if="auth.session" class="hidden-in-mobile">
       <NuxtLink
-        to="/dashboard"
+        to="/dashboard/teams"
         class="p[1rem 2rem] bg:transparent typo[no-underline decoration-none] text[h-light 1rem 700] rounded:0.5rem border[2 white solid] hover(bg:white text:black)"
       >
         Acessar Dashboard

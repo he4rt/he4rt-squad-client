@@ -15,10 +15,6 @@
       <p class="text[1rem h-light 700]">{{ item.name }}</p>
       <p class="text:h-gray">{{ item.type }}</p>
     </div>
-    <div class="flex[col gap-3 h-between ai-center jc-center]">
-      <p class="text[1rem h-light 700]">Tasks</p>
-      <p class="text:h-gray">{{ item.tasks }}</p>
-    </div>
     <NuxtLink to="/dashboard/teams" class="text[h-purple 1rem 700 center] typo[decoration-none] style:cursor-pointer">Ver equipe</NuxtLink>
   </div>
   </div>

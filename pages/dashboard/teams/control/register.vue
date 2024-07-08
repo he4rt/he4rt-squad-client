@@ -66,8 +66,6 @@
       method: 'POST'
     })
 
-    console.log(data)
-
     router.push('/dashboard/teams')
   }
 </script>

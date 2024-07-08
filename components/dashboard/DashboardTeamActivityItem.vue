@@ -49,7 +49,7 @@
       </div>
     </div>
     <button @click="onFinishProject" v-if="global.load.team.ownerId === auth.session.uid && color !== 'done' && !isFinished" class="text[h-light 1rem 600] bg:h-purple p[0.75rem 2.5rem] rounded:0.5rem border:0 m[r 2.5rem] style:cursor-pointer">
-      Finalizar Project
+      Finalizar Projeto
     </button>
   </div>
 </template>
@@ -71,10 +71,12 @@
     repoUrl: string
   }>()
 
-  const onOpenRepo = () => {
-    if(!props.repoUrl.startsWith('http')) return
+  const onOpenRepo = async () => {
+    if(!props.repoUrl?.startsWith('http')) return
 
-    window.open(props.repoUrl)
+   await navigateTo(props.repoUrl, {
+      external: true
+    })
   }
 
   const onFinishProject = async () => {

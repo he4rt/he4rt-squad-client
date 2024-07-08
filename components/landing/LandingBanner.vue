@@ -22,8 +22,7 @@
         <p class="text[3xl h-light]">Venha fazer parte da</p>
         <p class="text[700 3xl h-purple] m[t 0.5rem]">He4rt Devs</p>
         <p class="w:75% m[t 1.25rem] text:h-gray hidden-in-mobile">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue, velit sed scelerisque consequat, elit sem
-          consequat erat, quis mollis nibh lacus eget mauris.
+          Entre em nosso servidor do discord e aproveite para fazer novas amizades, compartilhar código e aproveitar o que há de melhor em uma comunidade unida.
         </p>
       </div>
     </div>
@@ -44,7 +43,15 @@
         },
       }"
     >
-      <MaterialBtn>Entrar no Discord</MaterialBtn>
+      <MaterialBtn @click="onDiscordInvite">Entrar no Discord</MaterialBtn>
     </div>
   </div>
 </template>
+
+<script setup>
+const onDiscordInvite = async () => {
+  await navigateTo('https://discord.gg/he4rt', {
+    external: true
+  })
+}
+</script>

@@ -35,6 +35,4 @@ const { data } = await useAsyncData(
     method: 'GET'
   })
 )
-
-console.log(data)
 </script>

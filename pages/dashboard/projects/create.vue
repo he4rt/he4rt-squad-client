@@ -9,6 +9,10 @@
           <input v-model="name" type="text" class="w:full border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
         </div>
         <div class="w:full md(w:reset-none)">
+          <p class="text[h-light dm-sans lg 500] m[b 0.75rem]">Tipo do Projeto</p>
+          <input v-model="type" placeholder="UI/UX, FrontEnd, BackEnd..." type="text" class="w:full border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
+        </div>
+        <div class="w:full md(w:reset-none)">
           <p class="text[h-light lg 500] m[b 0.75rem]">Descrição</p>
           <input v-model="description" type="text" class="w:full border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
         </div>
@@ -48,11 +52,12 @@
 
   const image = ref('https://i.imgur.com/vlU6ZAZ.jpg')
   const name = ref('')
+  const type = ref('')
   const description = ref('')
   const repo = ref('')
 
   const onRegisterProject = async () => {
-    if(!name.value || !description.value || !image.value) return
+    if(!name.value || !description.value || !image.value || !repo.value) return
 
     if(!auth.session) {
       router.push('/')
@@ -60,12 +65,17 @@
       return
     }
 
+    const { data } = await useFetch(`/users/${auth.session.uid}`, {
+      baseURL: 'http://localhost:3333',
+      method: 'GET'
+    })
+
     await useFetch('/projects', {
       body: {
-        name: name.value,
+        name: `[${type.value}]: ${name.value}`,
         teamName: global.load.team.name,
         id: auth.session.uid,
-        username: auth.session.email,
+        username: data.value.displayName,
         description: description.value,
         status: 'doing',
         image: image.value,

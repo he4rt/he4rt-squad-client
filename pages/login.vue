@@ -1,6 +1,7 @@
 <template>
   <div class="flex[col v-center] h[min 100vh] w:100% bg:h-dark-three">
-    <form @submit.prevent.stop="onSubmitForm" class="flex[col] bg:h-second-purple m[8rem 0] p:4rem rounded:0.75rem">
+    <img class="pos[absolute right-0 top-10] w:50% md(w:reset-none)" src="~/assets/logo.svg" alt="He4rt Developers Logo" />
+    <form @submit.prevent.stop="onSubmitForm" class="flex[col] z:10 bg:h-second-purple m[8rem 0] p:4rem rounded:0.75rem">
       <img src="~/assets/he4rt-1.svg" />
       <div class="flex[col] m[1rem 0] text[h-light 1rem 700]">
         <label>Email</label>
@@ -37,8 +38,6 @@ const onSubmitForm = async () => {
   // @ts-ignore
   auth.session = data.value
 
-  console.log(data.value)
-
-  router.push('/dashboard')
+  router.push('/dashboard/teams')
 }
 </script>

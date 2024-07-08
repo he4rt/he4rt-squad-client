@@ -19,7 +19,6 @@
     <a class="text:h-gray typo[decoration-none] style[cursor-pointer]" href="#ranking">Ranking</a>
     <a class="text:h-gray typo[decoration-none] style[cursor-pointer]" href="#about">Sobre</a>
     <a class="text:h-gray typo[decoration-none] style[cursor-pointer]" href="#discord">Discord</a>
-    <NuxtLink class="text:h-gray typo[decoration-none] style[cursor-pointer]" to="/dashboard"> Dashboard </NuxtLink>
   </div>
   <div class="flex[gap-20px text:h-gray] m[b 2.5rem]">
     <a target="_blank" href="https://www.instagram.com/heartdevs/">

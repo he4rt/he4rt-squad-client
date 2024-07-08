@@ -11,14 +11,6 @@
         </div>
         <p class="bg:h-purple text[h-light xs 700 dm-sans] p:0.25rem rounded:0.5rem">Nv.{{ global.load.team.level }}</p>
       </div>
-      <div class="flex[v-center gap-1.25rem] m[r 1.25rem] md(m:0)">
-        <ProviderIconButton>
-          <IconGear class="w:1.25rem h:1.25rem" />
-        </ProviderIconButton>
-        <ProviderIconButton>
-          <IconTrash class="w:1.5rem h:1.5rem text:#CC0000" />
-        </ProviderIconButton>
-      </div>
     </div>
     <div class="flex[col gap-3px v-center h-center] w:full p[2.5rem 0]">
       <div class="p:0.15rem flex[v-center h-center] rounded:9999px">
@@ -28,13 +20,14 @@
       <p class="text:h-gray">Chefe</p>
     </div>
     <div class="flex[wrap v-center h-between] md(flex[nowrap v-center h-between]) w:full">
-      <DashboardTeamUser v-for="item in members" :key="item.displayName" :url="item.image" :name="item.displayName" type="Front End" />
+      <DashboardTeamUser v-for="item in members" :key="item.displayName" :url="item.image" :name="item.displayName" />
       <DashboardTeamUser :teamName="global.load.team.name" v-if="members.length < 4 && global.load.team.ownerId === auth.session.uid" />
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+const router = useRouter()
 const global = useGlobalStore()
 const auth = useAuthStore()
 const owner = ref('')
@@ -50,6 +43,20 @@ onMounted(async() => {
 
   data.value.shift()
 
+  data.value = data.value.filter((obj, index, self) =>
+    index === self.findIndex((t) => (
+      t.id === obj.id
+    )))
+
   members.value = data.value
 })
+
+const onDeleteTeam = async () => {
+  await useFetch(`/teams/${global.load.team.name}`, {
+    method: 'DELETE',
+    baseURL: 'http://localhost:3333'
+  })
+
+  router.push('/dashboard/teams')
+}
 </script>

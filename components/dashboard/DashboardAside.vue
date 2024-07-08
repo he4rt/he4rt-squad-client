@@ -13,7 +13,7 @@
         </template>
         Seus times
       </DashboardAsideItem>
-      <DashboardAsideItem to="/dashboard">
+      <DashboardAsideItem to="/dashboard/projects">
         <template #icon>
           <IconProject class="w:1.5rem h:1.5rem" />
         </template>
