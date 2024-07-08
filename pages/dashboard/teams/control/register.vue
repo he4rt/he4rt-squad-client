@@ -15,20 +15,27 @@
       </div>
       <div class="flex[col v-start h-between] w:full">
         <p class="text[h-light dm-sans 500 lg] m[t 2.5rem]">Descrição do time</p>
-        <input  v-model="description" type="text" class="w:full border[h-gray 2 solid] h:5rem bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
+        <textarea  v-model="description" type="text" class="w:full border[h-gray 2 solid] h:5rem bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
       </div>
       <div class="flex[v-center h-center gap-2rem] w:full m[t 2.5rem] text:inter">
         <button
-          @click="router.push('/dashboard')"
+          @click="router.push('/dashboard/teams')"
           class="bg:transparent p[1rem 4rem] border[h-gray 1 solid] rounded:0.5rem text[1rem h-gray 700] style:cursor-pointer"
         >
           Descartar
         </button>
         <button
+          v-if="!spinner"
           @click="onRegisterTeam"
           class="bg:h-second-purple p[1rem 4rem] border:0 rounded:0.5rem text[1rem h-light 700] style:cursor-pointer"
         >
           Salvar alterações
+        </button>
+        <button
+          v-else
+          class="bg:h-second-purple p[1rem 4rem] border:0 rounded:0.5rem text[1rem h-light 700] style:cursor-pointer"
+        >
+          <IconSpinner class="w:1.5rem h:1.5rem" />
         </button>
       </div>
     </div>
@@ -45,14 +52,20 @@
   const name = ref('')
   const description = ref('')
 
+  const spinner = ref(false)
+
   const onRegisterTeam = async () => {
     if(!name.value || !description.value || !image.value) return
+
+    if(name.value.length >= 20 || description.value.length >= 100) return
 
     if(!auth.session) {
       router.push('/')
 
       return
     }
+
+    spinner.value = true
 
     const { data, error } = await useFetch('/teams', {
       body: {
@@ -65,6 +78,8 @@
       baseURL: 'http://localhost:3333',
       method: 'POST'
     })
+
+    spinner.value = false
 
     router.push('/dashboard/teams')
   }

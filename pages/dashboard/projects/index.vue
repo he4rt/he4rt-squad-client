@@ -48,9 +48,12 @@
             <IconClose class="w:1.5rem h:1.5rem" />Indisponível
           </p>
         </div>
-        <button @click="onStarProject(item)" class="flex[v-center gap-0.5rem] bg:h-dark-one style:cursor-pointer m[l 5rem] rounded:0.5rem p[0.5rem 0.75rem]">
+        <button v-if="!spinner" @click="onStarProject(item)" class="flex[v-center gap-0.5rem] bg:h-dark-one style:cursor-pointer m[l 5rem] rounded:0.5rem p[0.5rem 0.75rem]">
           <IconStar class="w:1.5rem h.1.5rem text:yellow" />
           <p class="text[#FAD62D 1.2rem]">{{ item.stars.length }}</p>
+        </button>
+        <button v-else @click="onStarProject(item)" class="flex[v-center gap-0.5rem] bg:h-dark-one style:cursor-pointer m[l 5rem] rounded:0.5rem p[0.5rem 0.75rem]">
+          <IconSpinner class="w:1.5rem h:1.5rem text:white" />
         </button>
         <button @click="onOpenProject(item)" class="bg:h-second-purple text:white style:cursor-pointer m[l 5rem] rounded:0.5rem p[0.5rem 0.75rem]">
           <IconOpen class="w:1rem h:1rem" />
@@ -68,6 +71,8 @@
   const global = useGlobalStore()
   const auth = useAuthStore()
 
+  const spinner = ref(false)
+
   const { data, refresh } = await useAsyncData(
   'projects',
     () => $fetch('items', {
@@ -77,6 +82,8 @@
   )
 
   const onStarProject = async (item) => {
+    spinner.value = true 
+
     await useFetch('/projects/star', {
       body: {
         id: `${item.teamName}:${item.name}`,
@@ -85,6 +92,8 @@
       baseURL: 'http://localhost:3333',
       method: 'POST'
     })
+
+    spinner.value = false 
 
     await refresh()
   }

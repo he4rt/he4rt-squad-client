@@ -8,7 +8,8 @@
       <input v-model="target" placeholder="Nome do Membro" class="border[h-gray 2 solid] bg:transparent p:0.5rem rounded:0.5rem text:h-light" type="text" />
     </div>
     <p v-if="name" class="text[h-light 1rem 700]">{{ name }}</p>
-    <button @click="onInviteMember" v-else class="text[h-light 1rem 700] bg:transparent cursor:pointer">Adicionar Membro</button>
+    <button @click="onInviteMember" v-else-if="!spinner" class="text[h-light 1rem 700] bg:transparent cursor:pointer">Adicionar Membro</button>
+    <button v-else class="text[h-light 1rem 700] bg:transparent cursor:pointer"><IconSpinner class="w:2rem h:2rem" /></button>
     <p v-if="type" class="text:h-gray">{{ type }}</p>
   </div>
 </template>
@@ -22,8 +23,10 @@
   }>()
 
   const target = ref('')
+  const spinner = ref(false)
 
   const onInviteMember = async () => {
+    spinner.value = true 
     const { data, error } = await useFetch('/teams/invite', {
       body: {
         userName: target.value,
@@ -33,6 +36,7 @@
       method: 'POST'
     })
 
+    spinner.value = false 
     target.value = ''
   }
 </script>

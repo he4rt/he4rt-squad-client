@@ -19,10 +19,18 @@
       </div>
     </div>
     <MaterialBtn
+      v-if="!spinner"
       class="typo[decoration-none] flex:h-center text[1rem h-light dm-sans 500] w:full p[0.875rem 0] border:0 bg:h-second-purple rounded:0.5rem m[b 0.25rem] style:cursor-pointer"
       @click="onLoadTeam"
     >
       Ver equipe
+    </MaterialBtn>
+    <MaterialBtn
+      v-else
+      class="typo[decoration-none] flex:h-center text[1rem h-light dm-sans 500] w:full p[0.875rem 0] border:0 bg:h-second-purple rounded:0.5rem m[b 0.25rem] style:cursor-pointer"
+      @click="onLoadTeam"
+    >
+      <IconSpinner class="h:1.5rem w:1.5rem" />
     </MaterialBtn>
   </div>
 </template>
@@ -43,8 +51,11 @@ const props = defineProps<{
   }
 }>()
 const emit = defineEmits(['reset'])
+const spinner = ref(false)
 
 const onLoadTeam = async () => {
+  spinner.value = true
+
   global.load.team = props.team
 
   router.push('/dashboard/teams/id')
@@ -53,10 +64,7 @@ const onLoadTeam = async () => {
 const onDeleteTeam = async () => {
   if(!confirm('Voce realmente deseja deletar o time?')) return
 
-  const { data } = await useFetch('/teams', {
-    body: {
-      name: props.team.name,
-    },
+  const { data } = await useFetch(`/teams/${props.team.name}`, {
     baseURL: 'http://localhost:3333',
     method: 'DELETE'
   })

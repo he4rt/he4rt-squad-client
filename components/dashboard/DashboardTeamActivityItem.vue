@@ -75,7 +75,7 @@
     if(!props.repoUrl?.startsWith('http')) return
 
    await navigateTo(props.repoUrl, {
-      external: true
+      external: true,
     })
   }
 

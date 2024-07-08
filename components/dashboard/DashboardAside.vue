@@ -19,12 +19,6 @@
         </template>
         Projetos
       </DashboardAsideItem>
-      <DashboardAsideItem to="/">
-        <template #icon>
-          <IconLogout class="w:1.5rem h:1.5rem" />
-        </template>
-        Sair
-      </DashboardAsideItem>
     </div>
   </div>
 </template>
