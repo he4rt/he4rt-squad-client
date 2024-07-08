@@ -16,9 +16,9 @@
       },
     }"
   >
-    <LandingCounterItem :data="teams" first="Equipes" second="formadas" description="Compartilhe seus projetos em equipe." />
-    <LandingCounterItem :data="members" first="Membros" second="participando" description="Se torne um membro da comunidade." />
-    <LandingCounterItem :data="projects" first="Projetos" second="realizados" description="Tire seus projetos do papel conosco." />
+    <LandingCounterItem :data="data.teams" first="Equipes" second="formadas" description="Compartilhe seus projetos em equipe." />
+    <LandingCounterItem :data="data.users" first="Membros" second="participando" description="Se torne um membro da comunidade." />
+    <LandingCounterItem :data="data.projects" first="Projetos" second="realizados" description="Tire seus projetos do papel conosco." />
   </div>
 </template>
 
@@ -27,17 +27,13 @@ const teams = ref(0)
 const members = ref(0)
 const projects = ref(0)
 
-setTimeout(async () => {
-  const { data, error } = await useFetch('/landing', {
-    baseURL: 'http://localhost:3333'
+const { data, error, refresh } = await useAsyncData(
+  'values',
+  () => $fetch('http://localhost:3333/landing', {
+    method: 'GET'
   })
+)
 
-  if(!data.value) return
-  
-  teams.value = data.value.teams
-  members.value = data.value.users
-  projects.value = data.value.projects
-}, 1000)
 
 
 </script>
