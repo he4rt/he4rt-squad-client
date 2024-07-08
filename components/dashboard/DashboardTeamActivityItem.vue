@@ -20,7 +20,7 @@
         <div @click="onOpenRepo" class="flex[v-center h-center] style:cursor-pointer bg:h-dark-four rounded:0.5rem w:1.25rem h:1.25rem p:0.125rem">
           <IconGithub class="w:1rem h:1rem text:h-gray" />
         </div>
-
+        <p class="text[h-purple 700 1.1rem]">{{ teamName }}</p>
         <h1 class="text[h-light lg]">{{ title }}</h1>
       </div>
       <div class="flex[v-center h-between] p[1.25rem 0]">
@@ -62,6 +62,7 @@
   const props = defineProps<{
     id: string
     title: string
+    teamName: string
     description: string
     color?: 'done' | 'doing' | 'unavailable'
     time: number
@@ -75,7 +76,7 @@
     if(!props.repoUrl?.startsWith('http')) return
 
    await navigateTo(props.repoUrl, {
-      external: true,
+      external: true
     })
   }
 

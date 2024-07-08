@@ -8,16 +8,6 @@
     <p class="text[center h-gray] p[1.25rem 0.5rem]">
       {{ props.team.description }}
     </p>
-    <div class="flex[v-center h-between] w:100% m[b 1.25rem]">
-      <div class="flex[col gap-1.25rem]">
-        <p class="text[h-light 1rem 700]">Projeto Atual:</p>
-        <p class="text:h-gray">{{ props.team.activateProject }}</p>
-      </div>
-      <div class="flex[col gap-1.25rem]">
-        <p class="text[h-light 1rem 700]">Nvl</p>
-        <p class="text:h-gray">{{ props.team.level }}</p>
-      </div>
-    </div>
     <MaterialBtn
       v-if="!spinner"
       class="typo[decoration-none] flex:h-center text[1rem h-light dm-sans 500] w:full p[0.875rem 0] border:0 bg:h-second-purple rounded:0.5rem m[b 0.25rem] style:cursor-pointer"

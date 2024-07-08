@@ -12,6 +12,7 @@
       <DashboardTeamActivityItem
         :id="`${item.teamName}:${item.name}`"
         :title="item.name"
+        :teamName="item.teamName"
         :description="item.description"
         :color="item.status"
         :username="item.username"
