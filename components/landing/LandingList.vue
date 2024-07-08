@@ -15,11 +15,10 @@
       <p class="text[1rem h-light 700]">{{ item.name }}</p>
       <p class="text:h-gray">{{ item.type }}</p>
     </div>
-    <div class="flex[col gap-3 h-between ai-center jc-center] display:none md(display:inline)">
-      <p class="text[1rem h-light 700]">Tarefas</p>
+    <div class="flex[col gap-3 ai-center jc-center] display:none md(display:inline)">
+      <p class="text[1rem h-light 700]">Tarefas Completadas</p>
       <p class="text:h-gray">{{ item.tasks }}</p>
     </div>
-    <NuxtLink to="/dashboard/teams" class="text[h-purple 1rem 700 center] typo[decoration-none] style:cursor-pointer">Ver equipe</NuxtLink>
   </div>
   </div>
 </template>

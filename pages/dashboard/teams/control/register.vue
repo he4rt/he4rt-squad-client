@@ -17,26 +17,26 @@
         <p class="text[h-light dm-sans 500 lg] m[t 2.5rem]">Descrição do time</p>
         <textarea  v-model="description" type="text" class="w:full border[h-gray 2 solid] h:5rem bg:transparent p:0.5rem rounded:0.5rem text:h-light" />
       </div>
-      <div class="flex[v-center h-center gap-2rem] w:full m[t 2.5rem] text:inter">
-        <button
+      <div class="flex[v-center h-center gap-5rem] w:full m[top 2.5rem] text:inter">
+        <MaterialBtn
           @click="router.push('/dashboard/teams')"
           class="bg:transparent p[1rem 4rem] border[h-gray 1 solid] rounded:0.5rem text[1rem h-gray 700] style:cursor-pointer"
         >
           Descartar
-        </button>
-        <button
+        </MaterialBtn>
+        <MaterialBtn
           v-if="!spinner"
           @click="onRegisterTeam"
           class="bg:h-second-purple p[1rem 4rem] border:0 rounded:0.5rem text[1rem h-light 700] style:cursor-pointer"
         >
           Salvar alterações
-        </button>
-        <button
+        </MaterialBtn>
+        <MaterialBtn
           v-else
           class="bg:h-second-purple p[1rem 4rem] border:0 rounded:0.5rem text[1rem h-light 700] style:cursor-pointer"
         >
           <IconSpinner class="w:1.5rem h:1.5rem" />
-        </button>
+        </MaterialBtn>
       </div>
     </div>
   </div>

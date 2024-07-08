@@ -48,8 +48,11 @@
         </div>
       </div>
     </div>
-    <button @click="onFinishProject" v-if="global.load.team.ownerId === auth.session.uid && color !== 'done' && !isFinished" class="text[h-light 1rem 600] bg:h-purple p[0.75rem 2.5rem] rounded:0.5rem border:0 m[r 2.5rem] style:cursor-pointer">
+    <button @click="onFinishProject" v-if="global.load.team.ownerId === auth.session.uid && color !== 'done' && !isFinished && !spinner" class="text[h-light 1rem 600] bg:h-purple p[0.75rem 2.5rem] rounded:0.5rem border:0 m[r 2.5rem] style:cursor-pointer">
       Finalizar Projeto
+    </button>
+    <button v-if="spinner" class="text[h-light 1rem 600] bg:h-purple p[0.75rem 2.5rem] rounded:0.5rem border:0 m[r 2.5rem] style:cursor-pointer">
+      <IconSpinner class="h:2rem w:2rem text:white" />
     </button>
   </div>
 </template>
@@ -58,6 +61,7 @@
   const global = useGlobalStore()
   const auth = useAuthStore()
   const isFinished = ref(false)
+  const spinner = ref(false)
 
   const props = defineProps<{
     id: string
@@ -84,14 +88,18 @@
   }
 
   const onFinishProject = async () => {
+    spinner.value = true
+
     await useFetch('/projects', {
       body: {
         id: props.id,
+        teamName: props.teamName
       },
       baseURL: 'http://localhost:3333',
       method: 'PUT'
     })
 
     isFinished.value = true
+    spinner.value = false
   }
 </script>

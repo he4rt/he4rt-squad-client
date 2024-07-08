@@ -27,6 +27,7 @@
         <div class="flex[v-center h-center] bg:h-dark-four rounded:0.5rem w:1.25rem h:1.25rem p:0.125rem">
           <IconFireTwo class="w:1rem h:1rem text:h-gray" />
         </div>
+        <h1 class="text[h-light lg] m[0 3rem 0 0]">{{ item.teamName }}</h1>
         <h1 class="text[h-light lg]">{{ item.name }}</h1>
       </div>
       <div class="flex[v-center h-between] p[1.25rem 0]">
