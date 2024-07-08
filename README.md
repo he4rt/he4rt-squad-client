@@ -1,7 +1,7 @@
 # He4rt Squad Frontend
 
-- Nuxt 3
-- UnunuraCSS
+- Nuxt 3.5.0
+- UnunuraCSS 1.6.19
 
 ## Setup
 
@@ -33,4 +33,6 @@ Locally preview production build:
 pnpm preview
 ```
 
-## Contributors
+## API
+
+Acesse a API deste projeto clicando [aqui.](https://github.com/he4rt/he4rt-squad-server)
