@@ -100,7 +100,10 @@
 
   const onOpenProject = async (item) => {
     await navigateTo(item.repoUrl, {
-      external: true
+      external: true,
+      open: {
+        target: '_blank'
+      }
     })
   }
 </script>

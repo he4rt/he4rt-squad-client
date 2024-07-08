@@ -51,7 +51,10 @@
 <script setup>
 const onDiscordInvite = async () => {
   await navigateTo('https://discord.gg/he4rt', {
-    external: true
+    external: true,
+    open: {
+      target: '_blank'
+    }
   })
 }
 </script>

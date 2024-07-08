@@ -11,7 +11,7 @@
   "devDependencies": {
     "@vueuse/motion": "2.2.3",
     "@vueuse/nuxt": "^10.11.0",
-    "nuxt": "3.3.3",
+    "nuxt": "3.7.0",
     "nuxt-seo-kit": "^1.3.13",
     "nuxt-ununura": "^1.6.19",
     "prettier": "^3.3.2",
